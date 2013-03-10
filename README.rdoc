@@ -1,8 +1,8 @@
 == Sistem online de gestiune a burselor
 
-Aplicatia isi propune sa realizeze un sistem de gestiune a burselor acordate de catre facultate.  Utilizatorii aplicatiei se impart in trei categorii: studenti, manageri si administrato. Bursele se impart in: burse de performanta, burse de merit, burse de studiu,  burse sociale, burse medicale si burse sociale ocazioanale.
+Aplicatia isi propune sa realizeze un sistem de gestiune a burselor acordate de catre facultate.  Utilizatorii aplicatiei se impart in trei categorii: studenti, manageri si administratori. Bursele se impart in: burse de performanta, burse de merit, burse de studiu,  burse sociale, burse medicale si burse sociale ocazioanale.
 
-STUDENTUL se poate loga in cadrul aplicatiei, avand deja toate datele personale completate si poate aplica pentru o bursa. El poate aplica la toate tipurile de  bursa, cu deosebirea ca pentru bursele de studiu si de merit trebuie sa completeze doar motivul pentru care solicita acesta bursa, iar pentru celelalte tipuri de bursa este necesara si incarcarea unuor documente  justificative.
+STUDENTUL se poate loga in cadrul aplicatiei, avand deja toate datele personale completate si poate aplica pentru o bursa. El poate aplica la toate tipurile de  bursa, cu deosebirea ca pentru bursele de studiu si de merit trebuie sa completeze doar motivul pentru care solicita acesta bursa, iar pentru celelalte tipuri de bursa este necesara si incarcarea unor documente  justificative.
 De asemenea, studentul poate salva o aplicare la o bursa, si poate reveni asupra acesteia prin incarcarea altor documente.
 Dupa ce a aplicat la un tip de bursa, studentul isi poate vedea toate aplicarile, precum si starea in care se afla acestea: in asteptare, neaprobata sau aprobata.
 
