@@ -20,6 +20,7 @@ group :assets do
 end
 
 group :production, :test do
+ gem 'therubyracer', '~> 0.9.3.beta1'
  gem 'pg'
 end
 
