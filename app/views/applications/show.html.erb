@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Submission date:</b>
+  <%= @application.submission_date %>
+</p>
+
+<p>
+  <b>Approval date:</b>
+  <%= @application.approval_date %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @application.status %>
+</p>
+
+<p>
+  <b>Reason:</b>
+  <%= @application.reason %>
+</p>
+
+
+<%= link_to 'Edit', edit_application_path(@application) %> |
+<%= link_to 'Back', applications_path %>

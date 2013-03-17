@@ -1,4 +1,8 @@
 Team9Scholarships::Application.routes.draw do
+  resources :scholarships
+
+  resources :applications
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

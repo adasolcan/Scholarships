@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Stype:</b>
+  <%= @scholarship.stype %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @scholarship.value %>
+</p>
+
+
+<%= link_to 'Edit', edit_scholarship_path(@scholarship) %> |
+<%= link_to 'Back', scholarships_path %>

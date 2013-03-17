@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  submission_date: 2013-03-17
+  approval_date: 2013-03-17
+  status: MyString
+  reason: MyText
+
+two:
+  submission_date: 2013-03-17
+  approval_date: 2013-03-17
+  status: MyString
+  reason: MyText
