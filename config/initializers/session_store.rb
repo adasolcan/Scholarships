@@ -1,6 +1,6 @@
 # Be sure to restart your server when you modify this file.
 
-Team9Scholarships::Application.config.session_store :cookie_store, key: '_Team9Scholarships_session'
+Team9Scholarships::Application.config.session_store :cookie_store, :key=> '_Team9Scholarships_session'
 
 # Use the database for sessions instead of the cookie-based default,
 # which shouldn't be used to store highly confidential information
