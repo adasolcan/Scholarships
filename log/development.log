@@ -177,3 +177,159 @@ Served asset /applications.css - 304 Not Modified (4ms)
 
 Started GET "/assets/applications.js?body=1" for 127.0.0.1 at 2013-03-19 10:46:49 +0200
 Served asset /applications.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateApplications (20130319082806)
+Migrating to CreateScholarships (20130320194540)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "scholarships" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "stype" varchar(255), "value" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+SQLite3::SQLException: table "scholarships" already exists: CREATE TABLE "scholarships" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "stype" varchar(255), "value" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateApplications (20130319082806)
+Migrating to DropScholarshipsTable (20130320194810)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130320194810')
+  [1m[36m (115.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("applications")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("scholarships")[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateApplications (20130319082806)
+Migrating to DropScholarshipsTable (20130320194810)
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("applications")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("scholarships")[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateApplications (20130319082806)
+Migrating to DropScholarshipsTable (20130320194937)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  DROP TABLE "scholarships"
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130320194937')[0m
+  [1m[35m (112.9ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("applications")[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateApplications (20130319082806)
+Migrating to CreateScholarships (20130320195056)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "scholarships" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "stype" varchar(255), "value" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130320195056')[0m
+  [1m[35m (139.4ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("applications")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("scholarships")
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-03-20 21:51:29 +0200
+Connecting to database specified by database.yml
+Served asset /rails.png - 304 Not Modified (27ms)
+
+
+Started GET "/applications" for 127.0.0.1 at 2013-03-20 21:51:33 +0200
+Processing by ApplicationsController#index as HTML
+  [1m[36mApplication Load (0.2ms)[0m  [1mSELECT "applications".* FROM "applications" [0m
+  Rendered applications/index.html.erb within layouts/application (9.2ms)
+Compiled scholarships.css  (24ms)  (pid 2719)
+Compiled application.css  (3ms)  (pid 2719)
+Completed 200 OK in 518ms (Views: 268.2ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-20 21:51:33 +0200
+Served asset /scaffolds.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-20 21:51:33 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/scholarships.js?body=1" for 127.0.0.1 at 2013-03-20 21:51:33 +0200
+Served asset /scholarships.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/applications.js?body=1" for 127.0.0.1 at 2013-03-20 21:51:33 +0200
+Served asset /applications.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/applications.css?body=1" for 127.0.0.1 at 2013-03-20 21:51:33 +0200
+Served asset /applications.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-20 21:51:33 +0200
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/scholarships.css?body=1" for 127.0.0.1 at 2013-03-20 21:51:33 +0200
+Served asset /scholarships.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-20 21:51:33 +0200
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-20 21:51:33 +0200
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started GET "/scholarships" for 127.0.0.1 at 2013-03-20 21:51:37 +0200
+Processing by ScholarshipsController#index as HTML
+  [1m[35mScholarship Load (0.2ms)[0m  SELECT "scholarships".* FROM "scholarships" 
+  Rendered scholarships/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 23ms (Views: 19.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-20 21:51:37 +0200
+Served asset /application.css - 304 Not Modified (23ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-20 21:51:37 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/applications.css?body=1" for 127.0.0.1 at 2013-03-20 21:51:37 +0200
+Served asset /applications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scholarships.css?body=1" for 127.0.0.1 at 2013-03-20 21:51:37 +0200
+Served asset /scholarships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-20 21:51:37 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-20 21:51:37 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/applications.js?body=1" for 127.0.0.1 at 2013-03-20 21:51:37 +0200
+Served asset /applications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scholarships.js?body=1" for 127.0.0.1 at 2013-03-20 21:51:37 +0200
+Served asset /scholarships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-20 21:51:37 +0200
+Served asset /application.js - 304 Not Modified (2ms)
