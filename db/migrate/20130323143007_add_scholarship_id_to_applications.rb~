@@ -1,0 +1,4 @@
+class AddScholarshipIdToApplications < ActiveRecord::Migration
+  def change
+  end
+end

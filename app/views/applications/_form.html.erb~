@@ -12,10 +12,6 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :id %><br />
-    <%= f.number_field :id %>
-  </div>
-  <div class="field">
     <%= f.label :submission_date %><br />
     <%= f.date_select :submission_date %>
   </div>
@@ -30,6 +26,10 @@
   <div class="field">
     <%= f.label :reason %><br />
     <%= f.text_area :reason %>
+  </div>
+  <div class="field">
+   <%= f.label :"Tip bursa"%>
+   <%= select("application","scholarship_id", Scholarship.all.collect{|r| [r.stype, r.id]}, { :include_blank => true }) %>  
   </div>
   <div class="actions">
     <%= f.submit %>

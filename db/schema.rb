@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130320195056) do
+ActiveRecord::Schema.define(:version => 20130323143007) do
 
   create_table "applications", :force => true do |t|
     t.date     "submission_date"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20130320195056) do
     t.text     "reason"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.integer  "scholarship_id"
   end
 
   create_table "scholarships", :force => true do |t|

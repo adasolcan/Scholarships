@@ -27,6 +27,10 @@
     <%= f.label :reason %><br />
     <%= f.text_area :reason %>
   </div>
+  <div class="field">
+   <%= f.label :"Tip bursa"%>
+   <%= select("application","scholarship_id", Scholarship.all.collect{|r| [r.stype, r.id]}, { :include_blank => true }) %>  
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

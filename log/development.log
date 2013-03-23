@@ -1049,3 +1049,669 @@ Served asset /scholarships.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 16:19:00 +0200
 Served asset /application.js - 304 Not Modified (3ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateScholarships (20130320195056)
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("applications")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("scholarships")[0m
+Connecting to database specified by database.yml
+
+
+Started GET "/scholarships" for 127.0.0.1 at 2013-03-23 16:28:08 +0200
+Connecting to database specified by database.yml
+Processing by ScholarshipsController#index as HTML
+  [1m[36mScholarship Load (0.1ms)[0m  [1mSELECT "scholarships".* FROM "scholarships" [0m
+  Rendered scholarships/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 136ms (Views: 76.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-23 16:28:08 +0200
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scholarships.css?body=1" for 127.0.0.1 at 2013-03-23 16:28:08 +0200
+Served asset /scholarships.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-23 16:28:08 +0200
+Served asset /jquery.js - 304 Not Modified (45ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-23 16:28:09 +0200
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/applications.css?body=1" for 127.0.0.1 at 2013-03-23 16:28:09 +0200
+Served asset /applications.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-23 16:28:09 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scholarships.js?body=1" for 127.0.0.1 at 2013-03-23 16:28:09 +0200
+Served asset /scholarships.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/applications.js?body=1" for 127.0.0.1 at 2013-03-23 16:28:09 +0200
+Served asset /applications.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 16:28:09 +0200
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/applications" for 127.0.0.1 at 2013-03-23 16:28:13 +0200
+Processing by ApplicationsController#index as HTML
+  [1m[35mApplication Load (0.2ms)[0m  SELECT "applications".* FROM "applications" 
+  Rendered applications/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 34ms (Views: 18.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/applications.css?body=1" for 127.0.0.1 at 2013-03-23 16:28:13 +0200
+Served asset /applications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-23 16:28:13 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-23 16:28:13 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scholarships.css?body=1" for 127.0.0.1 at 2013-03-23 16:28:13 +0200
+Served asset /scholarships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-23 16:28:13 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scholarships.js?body=1" for 127.0.0.1 at 2013-03-23 16:28:13 +0200
+Served asset /scholarships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/applications.js?body=1" for 127.0.0.1 at 2013-03-23 16:28:13 +0200
+Served asset /applications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-23 16:28:13 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 16:28:13 +0200
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/applications/new" for 127.0.0.1 at 2013-03-23 16:28:16 +0200
+Processing by ApplicationsController#new as HTML
+  Rendered applications/_form.html.erb (18.1ms)
+  Rendered applications/new.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 68ms (Views: 66.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-23 16:28:16 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/applications.css?body=1" for 127.0.0.1 at 2013-03-23 16:28:16 +0200
+Served asset /applications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-23 16:28:16 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/applications.js?body=1" for 127.0.0.1 at 2013-03-23 16:28:16 +0200
+Served asset /applications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-23 16:28:16 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scholarships.css?body=1" for 127.0.0.1 at 2013-03-23 16:28:16 +0200
+Served asset /scholarships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-23 16:28:16 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scholarships.js?body=1" for 127.0.0.1 at 2013-03-23 16:28:16 +0200
+Served asset /scholarships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 16:28:16 +0200
+Served asset /application.js - 304 Not Modified (2ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateScholarships (20130320195056)
+Migrating to AddScholarshipIdToApplications (20130323143007)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "applications" ADD "scholarship_id" integer
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130323143007')[0m
+  [1m[35m (122.0ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("applications")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("scholarships")
+
+
+Started GET "/applications" for 127.0.0.1 at 2013-03-23 16:34:46 +0200
+Connecting to database specified by database.yml
+Processing by ApplicationsController#index as HTML
+  [1m[36mApplication Load (0.1ms)[0m  [1mSELECT "applications".* FROM "applications" [0m
+  Rendered applications/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 170ms (Views: 106.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-23 16:34:47 +0200
+Served asset /application.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/applications.css?body=1" for 127.0.0.1 at 2013-03-23 16:34:47 +0200
+Served asset /applications.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-23 16:34:47 +0200
+Served asset /jquery.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/scholarships.css?body=1" for 127.0.0.1 at 2013-03-23 16:34:47 +0200
+Served asset /scholarships.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-23 16:34:47 +0200
+Served asset /scaffolds.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-23 16:34:47 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scholarships.js?body=1" for 127.0.0.1 at 2013-03-23 16:34:47 +0200
+Served asset /scholarships.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/applications.js?body=1" for 127.0.0.1 at 2013-03-23 16:34:47 +0200
+Served asset /applications.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 16:34:47 +0200
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/applications/new" for 127.0.0.1 at 2013-03-23 16:34:50 +0200
+Processing by ApplicationsController#new as HTML
+  Rendered applications/_form.html.erb (67.6ms)
+  Rendered applications/new.html.erb within layouts/application (74.3ms)
+Completed 500 Internal Server Error in 77ms
+
+ActionView::Template::Error (undefined method `collect' for nil:NilClass):
+    29:   </div>
+    30:   <div class="field">
+    31:    <%= f.label :"Tip bursa"%>
+    32:    <%= select("application","scholarship_id", @burse.collect{|r| [r.stype, r.id]}, { :include_blank => true }) %>  
+    33:   </div>
+    34:   <div class="actions">
+    35:     <%= f.submit %>
+  app/views/applications/_form.html.erb:32:in `block in _app_views_applications__form_html_erb__501417989__627821418'
+  app/views/applications/_form.html.erb:1:in `_app_views_applications__form_html_erb__501417989__627821418'
+  app/views/applications/new.html.erb:3:in `_app_views_applications_new_html_erb__937281622__628134678'
+  app/controllers/applications_controller.rb:29:in `new'
+
+
+  Rendered /home/adasolcan/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /home/adasolcan/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /home/adasolcan/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.4ms)
+
+
+Started GET "/applications" for 127.0.0.1 at 2013-03-23 16:37:54 +0200
+Connecting to database specified by database.yml
+Processing by ApplicationsController#index as HTML
+  [1m[36mApplication Load (0.1ms)[0m  [1mSELECT "applications".* FROM "applications" [0m
+  Rendered applications/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 156ms (Views: 96.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/applications/" for 127.0.0.1 at 2013-03-23 16:40:14 +0200
+Connecting to database specified by database.yml
+Processing by ApplicationsController#index as HTML
+  [1m[36mApplication Load (0.1ms)[0m  [1mSELECT "applications".* FROM "applications" [0m
+  Rendered applications/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 171ms (Views: 104.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-23 16:40:14 +0200
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/applications.css?body=1" for 127.0.0.1 at 2013-03-23 16:40:14 +0200
+Served asset /applications.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scholarships.css?body=1" for 127.0.0.1 at 2013-03-23 16:40:15 +0200
+Served asset /scholarships.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-23 16:40:15 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-23 16:40:15 +0200
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-23 16:40:15 +0200
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/applications.js?body=1" for 127.0.0.1 at 2013-03-23 16:40:15 +0200
+Served asset /applications.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 16:40:15 +0200
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/scholarships.js?body=1" for 127.0.0.1 at 2013-03-23 16:40:15 +0200
+Served asset /scholarships.js - 304 Not Modified (2ms)
+
+
+Started GET "/applications/new" for 127.0.0.1 at 2013-03-23 16:40:17 +0200
+Processing by ApplicationsController#new as HTML
+  [1m[35mScholarship Load (0.1ms)[0m  SELECT "scholarships".* FROM "scholarships" 
+  Rendered applications/_form.html.erb (34.6ms)
+  Rendered applications/new.html.erb within layouts/application (44.6ms)
+Completed 200 OK in 56ms (Views: 54.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-23 16:40:17 +0200
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/applications.css?body=1" for 127.0.0.1 at 2013-03-23 16:40:17 +0200
+Served asset /applications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-23 16:40:17 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scholarships.css?body=1" for 127.0.0.1 at 2013-03-23 16:40:17 +0200
+Served asset /scholarships.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-23 16:40:17 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/applications.js?body=1" for 127.0.0.1 at 2013-03-23 16:40:17 +0200
+Served asset /applications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scholarships.js?body=1" for 127.0.0.1 at 2013-03-23 16:40:17 +0200
+Served asset /scholarships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-23 16:40:17 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 16:40:17 +0200
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/applications" for 127.0.0.1 at 2013-03-23 16:40:30 +0200
+Processing by ApplicationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wcR06jy0j6W4B0oev7xpZen+ukSGtqfVP5IG/fmyt5k=", "application"=>{"submission_date(1i)"=>"2013", "submission_date(2i)"=>"1", "submission_date(3i)"=>"8", "approval_date(1i)"=>"2013", "approval_date(2i)"=>"3", "approval_date(3i)"=>"23", "status"=>"Neaprobata", "reason"=>"Media", "scholarship_id"=>"1"}, "commit"=>"Create Application"}
+Completed 500 Internal Server Error in 1ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: scholarship_id):
+  app/controllers/applications_controller.rb:43:in `new'
+  app/controllers/applications_controller.rb:43:in `create'
+
+
+  Rendered /home/adasolcan/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/adasolcan/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered /home/adasolcan/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.2ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateScholarships (20130320195056)
+Migrating to AddScholarshipIdToApplications (20130323143007)
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("applications")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("scholarships")[0m
+
+
+Started GET "/applications" for 127.0.0.1 at 2013-03-23 16:43:13 +0200
+Connecting to database specified by database.yml
+Processing by ApplicationsController#index as HTML
+  [1m[36mApplication Load (0.2ms)[0m  [1mSELECT "applications".* FROM "applications" [0m
+  Rendered applications/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 171ms (Views: 105.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-23 16:43:14 +0200
+Served asset /application.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/scholarships.css?body=1" for 127.0.0.1 at 2013-03-23 16:43:14 +0200
+Served asset /scholarships.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-23 16:43:14 +0200
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-23 16:43:14 +0200
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/applications.css?body=1" for 127.0.0.1 at 2013-03-23 16:43:14 +0200
+Served asset /applications.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-23 16:43:14 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/scholarships.js?body=1" for 127.0.0.1 at 2013-03-23 16:43:14 +0200
+Served asset /scholarships.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 16:43:14 +0200
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/applications.js?body=1" for 127.0.0.1 at 2013-03-23 16:43:14 +0200
+Served asset /applications.js - 304 Not Modified (2ms)
+
+
+Started GET "/applications/new" for 127.0.0.1 at 2013-03-23 16:43:16 +0200
+Processing by ApplicationsController#new as HTML
+  [1m[35mScholarship Load (0.1ms)[0m  SELECT "scholarships".* FROM "scholarships" 
+  Rendered applications/_form.html.erb (67.5ms)
+  Rendered applications/new.html.erb within layouts/application (74.7ms)
+Completed 200 OK in 86ms (Views: 84.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-23 16:43:16 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/applications.css?body=1" for 127.0.0.1 at 2013-03-23 16:43:16 +0200
+Served asset /applications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-23 16:43:16 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scholarships.css?body=1" for 127.0.0.1 at 2013-03-23 16:43:16 +0200
+Served asset /scholarships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-23 16:43:16 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-23 16:43:16 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scholarships.js?body=1" for 127.0.0.1 at 2013-03-23 16:43:16 +0200
+Served asset /scholarships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/applications.js?body=1" for 127.0.0.1 at 2013-03-23 16:43:16 +0200
+Served asset /applications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 16:43:16 +0200
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/applications" for 127.0.0.1 at 2013-03-23 16:43:29 +0200
+Processing by ApplicationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wcR06jy0j6W4B0oev7xpZen+ukSGtqfVP5IG/fmyt5k=", "application"=>{"submission_date(1i)"=>"2013", "submission_date(2i)"=>"1", "submission_date(3i)"=>"7", "approval_date(1i)"=>"2013", "approval_date(2i)"=>"3", "approval_date(3i)"=>"23", "status"=>"Neaprobata", "reason"=>"Media", "scholarship_id"=>"1"}, "commit"=>"Create Application"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.7ms)[0m  INSERT INTO "applications" ("approval_date", "created_at", "reason", "scholarship_id", "status", "submission_date", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["approval_date", Sat, 23 Mar 2013], ["created_at", Sat, 23 Mar 2013 14:43:29 UTC +00:00], ["reason", "Media"], ["scholarship_id", 1], ["status", "Neaprobata"], ["submission_date", Mon, 07 Jan 2013], ["updated_at", Sat, 23 Mar 2013 14:43:29 UTC +00:00]]
+  [1m[36m (183.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/applications/2
+Completed 302 Found in 197ms (ActiveRecord: 189.5ms)
+
+
+Started GET "/applications/2" for 127.0.0.1 at 2013-03-23 16:43:29 +0200
+Processing by ApplicationsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mApplication Load (1.0ms)[0m  SELECT "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered applications/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-23 16:43:29 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-23 16:43:29 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-23 16:43:29 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scholarships.css?body=1" for 127.0.0.1 at 2013-03-23 16:43:29 +0200
+Served asset /scholarships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-23 16:43:29 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/applications.css?body=1" for 127.0.0.1 at 2013-03-23 16:43:29 +0200
+Served asset /applications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/applications.js?body=1" for 127.0.0.1 at 2013-03-23 16:43:29 +0200
+Served asset /applications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scholarships.js?body=1" for 127.0.0.1 at 2013-03-23 16:43:29 +0200
+Served asset /scholarships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 16:43:29 +0200
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-23 16:43:29 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/applications.js?body=1" for 127.0.0.1 at 2013-03-23 16:43:29 +0200
+Served asset /applications.js - 304 Not Modified (0ms)
+
+
+Started GET "/applications/" for 127.0.0.1 at 2013-03-23 16:43:33 +0200
+Processing by ApplicationsController#index as HTML
+  [1m[36mApplication Load (0.2ms)[0m  [1mSELECT "applications".* FROM "applications" [0m
+  Rendered applications/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 60ms (Views: 57.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-23 16:43:33 +0200
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/applications.css?body=1" for 127.0.0.1 at 2013-03-23 16:43:33 +0200
+Served asset /applications.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-23 16:43:33 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-23 16:43:33 +0200
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/scholarships.css?body=1" for 127.0.0.1 at 2013-03-23 16:43:33 +0200
+Served asset /scholarships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-23 16:43:33 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/applications.js?body=1" for 127.0.0.1 at 2013-03-23 16:43:33 +0200
+Served asset /applications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scholarships.js?body=1" for 127.0.0.1 at 2013-03-23 16:43:33 +0200
+Served asset /scholarships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 16:43:33 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-23 16:43:33 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/applications/" for 127.0.0.1 at 2013-03-23 16:45:13 +0200
+Connecting to database specified by database.yml
+Processing by ApplicationsController#index as HTML
+  [1m[36mApplication Load (0.1ms)[0m  [1mSELECT "applications".* FROM "applications" [0m
+  Rendered applications/index.html.erb within layouts/application (42.8ms)
+Completed 500 Internal Server Error in 147ms
+
+ActionView::Template::Error (undefined local variable or method `scholarship_id' for #<#<Class:0xaef75cc>:0xb596525c>):
+    19:     <td><%= application.approval_date %></td>
+    20:     <td><%= application.status %></td>
+    21:     <td><%= application.reason %></td>
+    22:     <td><%= scholarship_id %></td>
+    23:     <td><%= link_to 'Show', application %></td>
+    24:     <td><%= link_to 'Edit', edit_application_path(application) %></td>
+    25:     <td><%= link_to 'Destroy', application, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  app/views/applications/index.html.erb:22:in `block in _app_views_applications_index_html_erb__612786918_84984520'
+  app/views/applications/index.html.erb:15:in `each'
+  app/views/applications/index.html.erb:15:in `_app_views_applications_index_html_erb__612786918_84984520'
+  app/controllers/applications_controller.rb:7:in `index'
+
+
+  Rendered /home/adasolcan/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /home/adasolcan/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/adasolcan/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.9ms)
+
+
+Started GET "/applications/" for 127.0.0.1 at 2013-03-23 16:46:03 +0200
+Connecting to database specified by database.yml
+Processing by ApplicationsController#index as HTML
+  [1m[36mApplication Load (0.1ms)[0m  [1mSELECT "applications".* FROM "applications" [0m
+  Rendered applications/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 144ms (Views: 80.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/applications.css?body=1" for 127.0.0.1 at 2013-03-23 16:46:04 +0200
+Served asset /applications.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-23 16:46:04 +0200
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-23 16:46:04 +0200
+Served asset /scaffolds.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-23 16:46:04 +0200
+Served asset /jquery.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-23 16:46:04 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scholarships.css?body=1" for 127.0.0.1 at 2013-03-23 16:46:04 +0200
+Served asset /scholarships.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/applications.js?body=1" for 127.0.0.1 at 2013-03-23 16:46:04 +0200
+Served asset /applications.js - 304 Not Modified (35ms)
+
+
+Started GET "/assets/scholarships.js?body=1" for 127.0.0.1 at 2013-03-23 16:46:04 +0200
+Served asset /scholarships.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 16:46:04 +0200
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-23 16:46:04 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/applications/1" for 127.0.0.1 at 2013-03-23 16:46:09 +0200
+Processing by ApplicationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wcR06jy0j6W4B0oev7xpZen+ukSGtqfVP5IG/fmyt5k=", "id"=>"1"}
+  [1m[35mApplication Load (0.4ms)[0m  SELECT "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (7.9ms)[0m  DELETE FROM "applications" WHERE "applications"."id" = ?  [["id", 1]]
+  [1m[36m (105.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/applications
+Completed 302 Found in 120ms (ActiveRecord: 113.5ms)
+
+
+Started GET "/applications" for 127.0.0.1 at 2013-03-23 16:46:09 +0200
+Processing by ApplicationsController#index as HTML
+  [1m[35mApplication Load (0.2ms)[0m  SELECT "applications".* FROM "applications" 
+  Rendered applications/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-23 16:46:09 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-23 16:46:09 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scholarships.css?body=1" for 127.0.0.1 at 2013-03-23 16:46:09 +0200
+Served asset /scholarships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/applications.css?body=1" for 127.0.0.1 at 2013-03-23 16:46:09 +0200
+Served asset /applications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-23 16:46:09 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-23 16:46:09 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/applications.js?body=1" for 127.0.0.1 at 2013-03-23 16:46:09 +0200
+Served asset /applications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scholarships.js?body=1" for 127.0.0.1 at 2013-03-23 16:46:09 +0200
+Served asset /scholarships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 16:46:09 +0200
+Served asset /application.js - 304 Not Modified (1ms)

@@ -2,11 +2,12 @@
 
 <table>
   <tr>
+    <th>Id</th>
     <th>Submission date</th>
     <th>Approval date</th>
     <th>Status</th>
     <th>Reason</th>
-    <th></th>
+    <th>Scholarship id</th>
     <th></th>
     <th></th>
   </tr>
@@ -18,6 +19,7 @@
     <td><%= application.approval_date %></td>
     <td><%= application.status %></td>
     <td><%= application.reason %></td>
+    <td><%= scholarship_id %></td>
     <td><%= link_to 'Show', application %></td>
     <td><%= link_to 'Edit', edit_application_path(application) %></td>
     <td><%= link_to 'Destroy', application, method: :delete, data: { confirm: 'Are you sure?' } %></td>
