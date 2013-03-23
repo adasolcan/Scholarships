@@ -12,6 +12,10 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :id %><br />
+    <%= f.number_field :id %>
+  </div>
+  <div class="field">
     <%= f.label :submission_date %><br />
     <%= f.date_select :submission_date %>
   </div>
