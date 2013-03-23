@@ -1715,3 +1715,30 @@ Served asset /scholarships.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 16:46:09 +0200
 Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/applications" for 127.0.0.1 at 2013-03-23 18:19:44 +0200
+Connecting to database specified by database.yml
+Processing by ApplicationsController#index as HTML
+  [1m[36mApplication Load (0.1ms)[0m  [1mSELECT "applications".* FROM "applications" [0m
+  Rendered applications/index.html.erb within layouts/application (30.3ms)
+Compiled jquery.js  (2ms)  (pid 61852)
+Compiled jquery_ujs.js  (0ms)  (pid 61852)
+Compiled application.js  (69ms)  (pid 61852)
+Completed 200 OK in 326ms (Views: 259.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-23 18:19:45 +0200
+Served asset /jquery.js - 200 OK (3ms)
+
+
+Started GET "/applications/new" for 127.0.0.1 at 2013-03-23 18:19:52 +0200
+Processing by ApplicationsController#new as HTML
+  [1m[35mScholarship Load (0.1ms)[0m  SELECT "scholarships".* FROM "scholarships" 
+  Rendered applications/_form.html.erb (31.5ms)
+  Rendered applications/new.html.erb within layouts/application (36.6ms)
+Completed 200 OK in 84ms (Views: 82.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-23 18:19:52 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
