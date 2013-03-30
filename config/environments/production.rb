@@ -1,6 +1,9 @@
 Team9Scholarships::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
+  # Default url
+  config.action_mailer.default_url_options = { :host => 'http://fmi-burse.herokuapp.com' }
+
   # Code is not reloaded between requests
   config.cache_classes = true
 
