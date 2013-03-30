@@ -1,5 +1,5 @@
-APP_ID = 'Testtt'
-APP_SECRET = '123456789'
+APP_ID = '123456789'
+APP_SECRET = 'secret'
 
 PROVIDER_URL = 'fmi-autentificare.herokuapp.com'
 
