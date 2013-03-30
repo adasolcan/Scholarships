@@ -26,5 +26,10 @@
 </p>
 
 
+<p>
+  <b>Scholarship_id:</b>
+  <%= @application.scholarship_id %>
+</p>
+
 <%= link_to 'Edit', edit_application_path(@application) %> |
 <%= link_to 'Back', applications_path %>

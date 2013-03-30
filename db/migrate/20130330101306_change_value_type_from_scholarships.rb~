@@ -1,0 +1,9 @@
+class ChangeValueTypeFromScholarships < ActiveRecord::Migration
+  def up
+    change_column :scholarship, :value, :integer
+  end
+
+  def down
+    change_column :scholarship, :value, :string
+  end
+end
