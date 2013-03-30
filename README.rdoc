@@ -10,4 +10,5 @@ MANAGERUL este cel care are acces la toate aplicarile de burse si poate verifica
 
 ADMINISTRATORUL ca si managerul poate verifica daca cererile de bursa sunt complete si are si dreptul de a aproba o bursa.
 In functie de anumiti parametrii pe care ii seteaza, pe baza unui algoritm, i se va afisa o lista cu bursele grupate pe Tip de bursa/An de studiu/Domeniu de licenta, pe care administratorul le poate aproba sau poate modifca din nou parametrii initiali.
+==
 

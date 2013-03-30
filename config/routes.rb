@@ -1,4 +1,6 @@
 Team9Scholarships::Application.routes.draw do
+  devise_for :users
+
   resources :scholarships
 
   resources :applications
