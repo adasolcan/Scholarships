@@ -1,6 +1,5 @@
 class UserSessionsController < ApplicationController
   before_filter :login_required, :only => [ :destroy ]
-
   respond_to :html
 
   # omniauth callback method
@@ -9,15 +8,10 @@ class UserSessionsController < ApplicationController
     logger.debug "+++ #{omniauth}"
 
     user = User.find_by_uid(omniauth['uid'])
-    #if not user
-      # New user registration
-     # user = User.new(:uid => omniauth['uid'])
-    #end    
+
     user.first_name = omniauth['extra']['first_name']
     user.last_name  = omniauth['extra']['last_name']
     user.save
-
-    #p omniauth
 
     # Currently storing all the info
     session[:user_id] = omniauth
