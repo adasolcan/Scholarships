@@ -234,8 +234,8 @@ body {
   line-height: 20px;
   color: #333333;
   background-color: #ffffff;
-  background-image: url("../../assets/images/bg2.jpg");
-  background-size:200%;
+  background-image: url("../images/body_bg6.jpg");
+  background-size:110%;
 }
 
 a {
@@ -306,6 +306,7 @@ a:focus {
 
 .container-narrow .well{
 	padding:10px;
+	
 }
 
 .span12 {
@@ -2027,7 +2028,7 @@ table {
   padding: 8px;
   line-height: 20px;
   text-align: left;
-  vertical-align: top;
+  
   border-top: 1px solid #dddddd;
 }
 
@@ -2298,7 +2299,7 @@ table th[class*="span"],
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url("../img/glyphicons-halflings.png");
+  background-image: url("../images/glyphicons-halflings.png");
   background-position: 14px 14px;
   background-repeat: no-repeat;
 }
@@ -2322,7 +2323,7 @@ table th[class*="span"],
 .dropdown-submenu:focus > a > [class^="icon-"],
 .dropdown-submenu:hover > a > [class*=" icon-"],
 .dropdown-submenu:focus > a > [class*=" icon-"] {
-  background-image: url("../img/glyphicons-halflings-white.png");
+  background-image: url("../images/glyphicons-halflings-white.png");
 }
 
 .icon-glass {
@@ -6170,7 +6171,7 @@ a.badge:focus {
   position: fixed;
 }
 
-/******--------------------EXTRA---------------------------- ******/
+/******extra******/
 .title{
 	color:white;
 	padding:10px 0;
@@ -6250,29 +6251,63 @@ a.badge:focus {
 	width:80px;
 }
 
-.container .nav li a{
-	cursor:pointer;
+.editProfile input[type="text"]{
+	width:180px;
 }
 
-.horizontal-divider{
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin-bottom: 20px;
-  font-size: 21px;
-  line-height: 40px;
-  color: #333333;
-  border: 0;
-  border-bottom: 1px solid #e5e5e5;
+.editProfile select{
+	margin-bottom:0;
 }
 
-.map_canvas{
-	margin: 20px auto;
-	z-index:5;
-	background: #f3f3f3;
-	border: 1px solid #fff;
-	border-radius: 5px;
-	box-shadow: 0 3px 15px rgba(0,0,0,0.4);
-	-moz-box-shadow: 0 3px 15px rgba(0,0,0,0.4);
-	-webkit-box-shadow: 0 3px 15px rgba(0,0,0,0.4);
+.burse-wizzard{
+	margin-top:15px;
+}
+
+#titluTabelListaTeme{
+  color: black;
+}
+.informatii{
+  width: 515px;
+}
+.inputAdmitere{
+  width: 200px;
+}
+.containerStatistici{
+  width: 550px;
+}
+.butonStatistici{
+  margin-left: 115px !important;
+}
+.admitere{
+  width: 535px;
+}
+.admitere .well{
+min-height: 200px;
+}
+.cerereAdmitere{
+  margin: 0 0 6px;
+}
+.vizualizare{
+  margin: 12px 300px auto;
+}
+.containerBarChart{
+   width: 438px;
+   height: 350px;
+   margin-left: 35px;
+}
+.celulaStatistici{
+  float: right;
+  width: 100px;
+}
+.baraStatistici{
+  width: 250px;
+}
+.tabelStatistici{
+  margin-bottom: 40px;
+}
+.tabelStatistici td{
+  border-top: 0px;
+}
+.containerServiciiConexe{
+  width: 650px;
 }

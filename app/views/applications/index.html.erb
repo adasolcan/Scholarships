@@ -22,7 +22,7 @@
         	<a class="brand" href="index.html">Burse</a>
         	<div class="nav-collapse collapse nav-bar-inverse-collapse">
         		<ul class="nav pull-right">
-        		<li><a href="#">Metodologie</a></li>
+        		<li><a onclick="showModal()">Metodologie</a></li>
         		<li class="divider-vertical"></li>
         		<li><a href="#">Iesire</a></li>
         		</ul>
@@ -104,6 +104,19 @@
 		</div>
 		
 	</div>
+		<div class="modal hide fade" id="metodologieModal">
+	    <div class="modal-header">
+	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	    <h3>Descriere metodologie</h3>
+	    </div>
+		    <div class="modal-body">
+		    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		    </div>
+	    <div class="modal-footer">
+	    <button type="button" class="btn btn-success" data-dismiss="modal" aria-hidden="true">OK</button>
+
+	    </div>
+    </div>
 	<div class="bottom-logo">
 		<img src="../../assets/images/logo.png" width="150px" height="150px"/>
 		</div>
@@ -111,6 +124,18 @@
 	
 	<script type="text/javascript">
 	   $("#wizard").bwizard();
+	</script>
+		<script type="text/javascript">
+	   $("#wizard").bwizard();
+	function showModal(){
+	   $("#metodologieModal").modal('show') ;
+	 }
+	
+	 $(".modalButton").click(function(){
+		var id = this.id;
+		var modalNou = '#modal' + id;
+		$(modalNou).modal('show');
+	 });
 	</script>
 </body>
 </html>
