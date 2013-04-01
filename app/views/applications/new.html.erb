@@ -1,5 +1,130 @@
-<h1>New application</h1>
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Burse</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-<%= render 'form' %>
+	<link href="../../assets/stylesheets/bootstrap.css" rel="stylesheet" />
+	<style>body{padding-top: 60px;}</style>
+	<link href="../../assets/stylesheets/bootstrap-responsive.css" rel="stylesheet" />
+	<link href="../../assets/stylesheets/bwizard.min.css" rel="stylesheet" />
+	<link href="../../assets/stylesheets/jasny-bootstrap.css" rel="stylesheet" />
+	</head>
+<body>
 
-<%= link_to 'Back', applications_path %>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">      
+        	<a class="brand" href="index.html">Burse</a>
+        	<div class="nav-collapse collapse nav-bar-inverse-collapse">
+        		<ul class="nav pull-right">
+        		<li><a href="#">Metodologie</a></li>
+        		<li class="divider-vertical"></li>
+        		<li><a href="#">Iesire</a></li>
+        		</ul>
+        	</div>
+        </div>
+      </div>
+    </div>
+
+	<div class="container-narrow">
+
+		<div class="masthead">
+			<h4 class="title">Bursa de merit</h4>
+			</div>
+		<div id="wizard">
+			<ol class="three-steps">
+				<li>Date personale</li>
+				<li>Upload fisiere</li>
+				<li>Finalizare</li>
+			</ol>
+			<div class="span12">
+			
+			<table class="table table-striped">
+				<tr>
+					<th>
+						Nume:
+					</th>
+					<td>
+						Vasile
+					</td>
+				</tr>
+				<tr>
+					<th>
+						Prenume:
+					</th>
+					<td>
+						Gigel
+					</th>
+				</tr>
+				<tr>
+					
+					<th>
+						Domeniu:
+					</th>
+					<td>
+						Matematica-Informatica
+					</td>
+				</tr>
+				<tr>
+					
+					<th>
+						Grupa:
+					</th>
+					<td>
+						342
+					</td>
+				</tr>
+			</table>
+			<div class="info">
+				<a class="text-error pull-right" href="account">Modifica date</a>
+			</div>
+			<div class="clearfix"></div>
+			<form>
+			 
+				<label class="checkbox">
+				<input type="checkbox"> Datele sunt corecte
+				</label>
+									
+			</form>
+			
+			</div>
+			<div>
+				<h4 class="muted">Alege adeverinta</h4>
+					<div class="fileupload fileupload-new" data-provides="fileupload">
+					<span class="btn btn-file btn-info btn-file-big"><span class="fileupload-new"><h3>Alege fisier</h3></span><span class="fileupload-exists">Schimba</span>
+						<input type="file" /></span>
+					<span class="fileupload-preview"></span>
+					<a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
+					</div>
+			</div>
+			<div>
+				<h4 class="text-success">Datele au fost trimise. Veti primi o notificare cu situatia bursei.</h4>
+			</div>
+			
+		</div>
+	
+		
+	</div>
+	<div class="bottom-logo">
+		<img src="../../assets/images/logo.png" width="150px" height="150px"/>
+		</div>
+
+	
+	<script src="../../assets/javascripts/jquery.min.js" type="text/javascript"></script>
+	<script src="../../assets/javascripts/bootstrap.js" type="text/javascript"></script>
+	<script src="../../assets/javascripts/jasny-bootstrap.js" type="text/javascript"></script>
+	<script src="../../assets/javascripts/bwizard.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+	
+	   $("#wizard").bwizard();
+	</script>
+</body>
+</html>
+.btn-mare{
+	margin:10px 0;
+	min-height: 170px;
+  min-width: 200px;
+}
