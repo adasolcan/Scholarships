@@ -10,6 +10,7 @@ Team9Scholarships::Application.routes.draw do
   match '/auth/:provider/callback', :to => 'user_sessions#create'
   match '/auth/failure', :to => 'user_sessions#failure'
   match '/user_new_session', :to => 'user_sessions#create', :via => [:post]
+  match '/autentificare', :to => redirect("#{PROVIDER_URL}/auth/autentificare/authorize") 
 
   # Custom logout
   match '/logout', :to => 'user_sessions#destroy'

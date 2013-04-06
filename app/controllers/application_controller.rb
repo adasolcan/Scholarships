@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
     if !current_user
       respond_to do |format|
         format.html  {
-          redirect_to ("#{PROVIDER_URL}/auth/autentificare/authorize", redirect_uri: "http://fmi-burse.herokuapp.com/user_new_session")
+          redirect_to autentificare_path
         }
         format.json {
           render :json => { 'error' => 'Access Denied' }.to_json
