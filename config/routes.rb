@@ -9,7 +9,7 @@ Team9Scholarships::Application.routes.draw do
   # omniauth
   match '/auth/:provider/callback', :to => 'user_sessions#create'
   match '/auth/failure', :to => 'user_sessions#failure'
-  match '/user_new_session', :to => 'user_sessions#create'
+  match '/user_new_session', :to => 'user_sessions#create', :via => [:post]
 
   # Custom logout
   match '/logout', :to => 'user_sessions#destroy'
