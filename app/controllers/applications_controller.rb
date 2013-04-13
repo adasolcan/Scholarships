@@ -32,10 +32,13 @@ class ApplicationsController < ApplicationController
   # GET /applications/new.json
   def new
     @application = Application.new
-	@user_id = @current_user.uid
-	logger.info("http://fmi-autentificare.herokuapp.com/users/3.json?outh_token="+@current_user.token)
-	@result = JSON.parse(open("http://fmi-autentificare.herokuapp.com/users/3.json?outh_token="+@current_user.token).read)
-	
+	@user_token = @current_user.token
+	logger.info("TOKEN = " + @user_token)
+	logger.info("http://fmi-autentificare.herokuapp.com/users/#{@current_user.uid}.json?oauth_token=#{@current_user.token}")
+	@result = JSON.parse(open("http://fmi-autentificare.herokuapp.com/users/#{@current_user.uid}.json?oauth_token=#{@current_user.token}").read)
+	logger.info("RESULT = " + @result.inspect)
+	#logger.info("RESULT.GENRE = " +@result["user"]["first_name"])
+	#puts @result
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @application }

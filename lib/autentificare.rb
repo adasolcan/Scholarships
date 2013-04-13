@@ -22,7 +22,12 @@ module OmniAuth
       extra do
         {
           :first_name => raw_info['extra']['first_name'],
-          :last_name  => raw_info['extra']['last_name']
+          :last_name  => raw_info['extra']['last_name'],
+          :email => raw_info['extra']['email'],
+          :student  => raw_info['extra']['student'],
+          :teacher => raw_info['extra']['teacher'],
+          :management  => raw_info['extra']['management'],
+          :token => raw_info['extra']['token']
         }
       end
 
