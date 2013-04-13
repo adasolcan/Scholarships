@@ -33,11 +33,9 @@ class ApplicationsController < ApplicationController
   def new
     @application = Application.new
 	@user_token = @current_user.token
-	logger.info("TOKEN = " + @user_token)
-	logger.info("http://fmi-autentificare.herokuapp.com/users/#{@current_user.uid}.json?oauth_token=#{@current_user.token}")
 	@result = JSON.parse(open("http://fmi-autentificare.herokuapp.com/users/#{@current_user.uid}.json?oauth_token=#{@current_user.token}").read)
 	logger.info("RESULT = " + @result.inspect)
-	#logger.info("RESULT.GENRE = " +@result["user"]["first_name"])
+	logger.info("RESULT.GROUP_ID = " +@result["user"]["student"]["group_id"].to_s)
 	#puts @result
     respond_to do |format|
       format.html # new.html.erb
