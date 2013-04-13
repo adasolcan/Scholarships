@@ -228,6 +228,7 @@ $.widget("bootstrap.bwizard", {
 			this.buttons = $('<ul class="pager"/>');
 			this.buttons.addClass('bwizard-buttons');
 			if(backBtnText != ''){
+				//alert("buton");
 				this.backBtn =
 					$("<li class='previous'><a class='btn' href='#'>" +
 						backBtnText + "</a></li>")
@@ -413,6 +414,7 @@ $.widget("bootstrap.bwizard", {
 			this.nextBtn[o.activeIndex >= this.panels.length - 1 ?
 				'addClass' : 'removeClass']('disabled btn-success')
 				.attr('aria-disabled', (o.activeIndex >= this.panels.length - 1));
+				
 		}
 	},
 
