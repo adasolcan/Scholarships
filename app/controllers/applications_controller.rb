@@ -1,5 +1,10 @@
+require 'open-uri'
+require 'json'
+
 class ApplicationsController < ApplicationController
   before_filter :login_required
+
+  
   
   # GET /applications
   # GET /applications.json
@@ -27,7 +32,10 @@ class ApplicationsController < ApplicationController
   # GET /applications/new.json
   def new
     @application = Application.new
-
+	@user_id = @current_user.uid
+	logger.info("http://fmi-autentificare.herokuapp.com/users/3.json?outh_token="+@current_user.token)
+	@result = JSON.parse(open("http://fmi-autentificare.herokuapp.com/users/3.json?outh_token="+@current_user.token).read)
+	
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @application }
