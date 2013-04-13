@@ -10,11 +10,21 @@ class ApplicationsController < ApplicationController
   # GET /applications.json
   def index
     @applications = Application.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @applications }
+	if @current_user.is_management == "true" 
+		respond_to do |format|
+			format.html { redirect_to '/manager' }
+			format.json { render json: @applications }
+    	end
+	end
+	if @current_user.is_student == "true"
+        respond_to do |format|
+          format.html # index.html.erb
+          format.json { render json: @applications }
+        end
     end
+  end
+	
+  def admin_manager
   end
 
   # GET /applications/1

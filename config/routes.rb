@@ -1,6 +1,5 @@
 Team9Scholarships::Application.routes.draw do
   resources :scholarships
-
   resources :applications
   
   root :to => 'applications#index'
@@ -11,8 +10,7 @@ Team9Scholarships::Application.routes.draw do
   # Custom logout
   match '/logout', :to => 'user_sessions#destroy'
 
-
-
+  match '/manager', :to => 'applications#admin_manager'
   #students by specialization
    
 end
