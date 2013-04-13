@@ -1,4 +1,6 @@
 Team9Scholarships::Application.routes.draw do
+  resources :document_types
+
   resources :scholarships
   resources :applications
   

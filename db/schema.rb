@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130413110732) do
+ActiveRecord::Schema.define(:version => 20130413132725) do
 
   create_table "applications", :force => true do |t|
     t.date     "submission_date"
@@ -23,6 +23,21 @@ ActiveRecord::Schema.define(:version => 20130413110732) do
     t.integer  "scholarship_id"
     t.integer  "user_id"
     t.integer  "on_card"
+  end
+
+  create_table "document_types", :force => true do |t|
+    t.string   "doc_type"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "documents", :force => true do |t|
+    t.string   "title"
+    t.integer  "document_type"
+    t.binary   "source"
+    t.integer  "application_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "scholarships", :force => true do |t|
