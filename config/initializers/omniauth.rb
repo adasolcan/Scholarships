@@ -1,5 +1,5 @@
-APP_ID = '5d6d6b67-db3c-4315-abe6-f482f241ba5f'
-APP_SECRET = '6ce42bcbffa315f14d9a4ba82f752d17fcad4850f5f336edbb'
+APP_ID = '096a9bf8-3acf-42a4-b3cf-cdad73d1a936'
+APP_SECRET = 'fa9189b4e2257b0f1a19e69a8dcca0c052efa0a6a468b3b369'
 
 CUSTOM_PROVIDER_URL = 'http://fmi-autentificare.herokuapp.com'
 
