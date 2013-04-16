@@ -19,7 +19,7 @@ class UserSessionsController < ApplicationController
     user.is_student  = omniauth['extra']['student']
     user.is_teacher  = omniauth['extra']['teacher']
     user.is_management  = omniauth['extra']['management']
-	#abort(omniauth['credentials']['token'].to_json)
+	user.is_admin  = omniauth['extra']['admin']
 	user.token = omniauth['credentials']['token']
     user.save
 

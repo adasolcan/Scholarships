@@ -27,6 +27,7 @@ module OmniAuth
           :student  => raw_info['extra']['student'],
           :teacher => raw_info['extra']['teacher'],
           :management  => raw_info['extra']['management'],
+          :admin  => raw_info['extra']['admin'],
           :token => raw_info['extra']['token']
         }
       end
