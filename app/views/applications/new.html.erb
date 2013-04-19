@@ -26,6 +26,7 @@ body{padding-top: 60px;}
 		<title></title>
 	</head>
 	<body>
+              <%= form_for(@application) do |f|%> 
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container">
@@ -217,7 +218,10 @@ body{padding-top: 60px;}
 				</div>
 				<div>
 					<h4 class="text-success">
-						Datele au fost trimise. Veti primi o notificare cu situatia bursei.
+						Cererea poate fi depusa.
+						<%= f.hidden_field :user_id, :value => @current_user.id %>
+                            			<%= logger.info("USER ID = " + @current_user.id.to_s + " app.USER_ID= ")%>
+                                                <%= f.submit%>
 					</h4>
 				</div>
 			</div>
@@ -329,5 +333,7 @@ $("#wizard").bwizard();
 		$(modalNou).modal('show');
 		});
 		</script>
+             <% end%>
 	</body>
 </html>
+

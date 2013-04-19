@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130413132725) do
+ActiveRecord::Schema.define(:version => 20130416060714) do
 
   create_table "applications", :force => true do |t|
     t.date     "submission_date"
@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(:version => 20130413132725) do
     t.string   "is_student"
     t.string   "is_teacher"
     t.string   "is_management"
+    t.string   "is_admin"
   end
 
 end
