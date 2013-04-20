@@ -14,6 +14,8 @@ Team9Scholarships::Application.routes.draw do
 
   match '/manager', :to => 'applications#admin_manager'
   match '/admin', :to => 'applications#admin'
+
+  match '/applications/:scholarship_id/new', :to => 'applications#new'
   #students by specialization
    
 end

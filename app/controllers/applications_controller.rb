@@ -49,12 +49,26 @@ class ApplicationsController < ApplicationController
 
   # GET /applications/new
   # GET /applications/new.json
+  #def new
+   # @application = Application.new
+#	@user_token = @current_user.token
+#	@result = JSON.parse(open("http://fmi-autentificare.herokuapp.com/users/#{@current_user.uid}.json?oauth_token=#{@current_user.token}").read)
+#	logger.info("RESULT = " + @result.inspect)
+#	logger.info("RESULT.GROUP_ID = " +@result["user"]["student"]["group_id"].to_s)
+	#puts @result
+ #   respond_to do |format|
+ #     format.html # new.html.erb
+ #     format.json { render json: @application }
+ #   end
+#  end
+
   def new
     @application = Application.new
 	@user_token = @current_user.token
 	@result = JSON.parse(open("http://fmi-autentificare.herokuapp.com/users/#{@current_user.uid}.json?oauth_token=#{@current_user.token}").read)
 	logger.info("RESULT = " + @result.inspect)
 	logger.info("RESULT.GROUP_ID = " +@result["user"]["student"]["group_id"].to_s)
+    @scholarship_id = params[:scholarship_id]
 	#puts @result
     respond_to do |format|
       format.html # new.html.erb

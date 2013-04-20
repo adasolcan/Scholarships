@@ -47,7 +47,8 @@ body{padding-top: 60px;}
 		<div class="container-narrow">
 			<div class="masthead">
 				<h4 class="title">
-					Bursa de merit
+					<!--Bursa de merit-->
+                    <%= @scholarship_id %>
 				</h4>
 			</div>
 			<div id="wizard">
@@ -146,14 +147,15 @@ body{padding-top: 60px;}
 								Card
 							</th>
 							<td>
-								<select id="card" style="width: 55px;">
+								<!-- <select id="card" style="width: 55px;">
 									<option value="Nu">
 										Nu
 									</option>
 									<option value="Da">
 										Da
 									</option>
-								</select>
+								</select> -->
+                                <%= f.select :on_card, [['Da', 1], ['Nu', 0]] %>
 								<div id="IBAN" style="display:inline"> <b>&nbsp; IBAN:</b> 5123412</div>
 							</td>
 						</tr>
@@ -162,8 +164,9 @@ body{padding-top: 60px;}
 								Motive
 							</th>
 							<td>
-								<textarea class="textarea" name="fname" style="width:300px" rows="5" value=''>
-</textarea>
+								<!-- <textarea class="textarea" name="fname" style="width:300px" rows="5" value=''> 
+</textarea> -->
+                                <%= f.text_area :reason, :cols => 40, :rows => 5 %>
 							</td>
 							<td id="reasons" style="color:red">
 								* Introduceti motivele
@@ -220,6 +223,10 @@ body{padding-top: 60px;}
 					<h4 class="text-success">
 						Cererea poate fi depusa.
 						<%= f.hidden_field :user_id, :value => @current_user.id %>
+                        <%= f.hidden_field :submission_date, :value => Date.today.to_s %>
+                        <%= f.hidden_field :status, :value => "In asteptare" %>
+                        <%= f.hidden_field :scholarship_id, :value => @scholarship_id %>
+
                         <%# logger.info("USER ID = " + @current_user.id.to_s + " app.USER_ID= ")%>
                         <%= f.submit "Depune cererea"%>
 					</h4>
