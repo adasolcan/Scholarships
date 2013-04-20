@@ -1,7 +1,8 @@
 	<link href="/assets/bootstrap.css" rel="stylesheet" />
 	<style>body{padding-top: 60px;}</style>
 	<link href="/assets/bootstrap-responsive.css" rel="stylesheet" />
-	<link href="/assets/bwizard.min.css" rel="stylesheet" />
+	<link href="/assets/bwizard.min.css" rel="stylesheet" />	
+	<link href="/assets/admin_manager.css" rel="stylesheet" />
 	<script src="/assets/jquery.min.js"></script>
 	<script src="/assets/bootstrap.min.js"></script>
 	<script src="/assets/bwizard.js" type="text/javascript"></script>
@@ -31,21 +32,21 @@
             <a class="brand" href="">Admin</a>
               <div class="container" style="width: auto;">
                 <ul class="nav">
-                  <li><a href="#">Cereri nerezolvate</a></li>
+                  <li id="nerezolvate"><a href="#" onclick="cereriNerezolvate()">Cereri nerezolvate</a></li>
                   
-                  <li><a href="">Cereri rezolvate</a></li>
-                  <li class="active"><a href="">Setare Parametri</a></li>
+                  <li id="rezolvate"><a href="#" onclick="cereriRezolvate()">Cereri rezolvate</a></li>
+                  <li id="param" class="active"><a href="#" onclick="paramSel()">Setare Parametri</a></li>
               </div>
             </div>
           </div>
     </div>
       
-    <div class="well">
+    <div class="well paramselect" >
     	<table class="table table-striped" style="margin-top:10px; float:left;">
 			<tr>
 				<th>An studii</th>
-				<th>Seria</th>
-				<th>Seria</th>
+				<th>Domeniul</th>
+				<th>Specializarea</th>
 				<th>Locuri disponibile</th>
 			</tr>
 			<tr>
@@ -77,6 +78,175 @@
 		</table>
 			
 	<input type="button" class="btn btn-primary pull-right fixed-bottom" value="Actulizare informatii"/>
+
+	</div>
+
+	   <div class="well nerez">
+    	<div class="span12">
+	    	<div class="span2">
+	    	    <label>An</label>
+	    		<select class="span2">
+	    			<option>1</option>
+	    			<option>2</option>
+	    			<option>3</option>
+	    		</select>
+	    	</div>
+	    	<div class="span3">
+	    		<label>Domeniu</label>
+	    		<select class="span3">
+	    			<option>Matematica</option>
+	    			<option>Informatica</option>
+	    		</select>
+	    	</div>
+	    	<div class="span4">
+	    		<label >Tip Bursa</label>
+	    		<select class="span4">
+	    			<option>Performanta</option>
+	    			<option>Merit</option>
+	    			<option>Sociala</option>
+	    			<option>Sociala ocazionala</option>
+	    			<option>Medicala</option>
+	    			<option>Sociala orfan</option>
+	    		</select>
+	    	</div>
+	    	<div class="span2 offset1">
+	    	<label>Actualizare</label>
+	    <input type="button" value="Actualizare lista" class="btn btn-primary">
+	    	</div>
+    	</div>
+    	
+		<table class="table table-striped" style="margin-top:10px; float:left;">
+			<tr>
+				<th>#</th>
+				<th>Prenume</th>
+				<th>Nume</th>
+				<th>An</th>
+				<th>Tip bursa</th>
+				<th>Detalii</th>
+				<th>Status</th>
+				
+			</tr>
+			<tr>
+			  <td>1</td>
+			  <td>Andrei</td>
+			  <td>Popescu</td>
+			  <td>I</td>	 
+			  <td>Merit</td>
+			  <td><button class="btn btn-info modalButton" id="1">Vezi Bursa</button></td>
+			  <td>In asteptare</td>
+			</tr>
+			<tr>
+			  <td>2</td>
+			  <td>Vasile</td>
+			  <td>Georgescu</td>
+			  <td>II</td>
+			  <td>Sociala</td>
+			   <td><button class="btn btn-info modalButton" id="2">Vezi Bursa</button></td>
+			  <td>In asteptare</td>
+			</tr>
+			<tr>
+			  <td>3</td>
+			  <td>Mihai</td>
+			  <td>Popescu</td>
+			  <td>I</td>
+			  <td>Sociala</td>
+			   <td><button class="btn btn-info modalButton" id="3">Vezi Bursa</button></td>
+			  <td>In asteptare</td>
+			</tr>
+			<tr>
+			  <td>4</td>
+			  <td>George</td>
+			  <td>Ionescu</td>
+			  <td>III</td>	 
+			  <td>Orfan</td>
+			   <td><button class="btn btn-info modalButton" id="4">Vezi Bursa</button></td>
+			  <td>In asteptare</td>
+			</tr>
+		</table>
+	</div>
+	<div class="well rez">
+    	<div class="span12">
+	    	<div class="span2">
+	    	    <label>An</label>
+	    		<select class="span2">
+	    			<option>1</option>
+	    			<option>2</option>
+	    			<option>3</option>
+	    		</select>
+	    	</div>
+	    	<div class="span3">
+	    		<label>Domeniu</label>
+	    		<select class="span3">
+	    			<option>Matematica</option>
+	    			<option>Informatica</option>
+	    		</select>
+	    	</div>
+	    	<div class="span4">
+	    		<label >Tip Bursa</label>
+	    		<select class="span4">
+	    			<option>Performanta</option>
+	    			<option>Merit</option>
+	    			<option>Sociala</option>
+	    			<option>Sociala ocazionala</option>
+	    			<option>Medicala</option>
+	    			<option>Sociala orfan</option>
+	    		</select>
+	    	</div>
+	    	<div class="span2 offset1">
+	    	<label>Actualizare</label>
+	    <input type="button" value="Actualizare lista" class="btn btn-primary">
+	    	</div>
+    	</div>
+    	
+		<table class="table table-striped" style="margin-top:10px; float:left;">
+			<tr>
+				<th>#</th>
+				<th>Prenume</th>
+				<th>Nume</th>
+				<th>An</th>
+				<th>Tip bursa</th>
+				<th>Detalii</th>
+				<th>Status</th>
+				
+			</tr>
+			<tr>
+			  <td>1</td>
+			  <td>Andrei</td>
+			  <td>Rezolvatul</td>
+			  <td>I</td>	 
+			  <td>Merit</td>
+			  <td><button class="btn btn-info modalButton" id="1">Vezi Bursa</button></td>
+			  <td>In asteptare</td>
+			</tr>
+			<tr>
+			  <td>2</td>
+			  <td>Vasile</td>
+			  <td>Rezolvatul</td>
+			  <td>II</td>
+			  <td>Sociala</td>
+			   <td><button class="btn btn-info modalButton" id="2">Vezi Bursa</button></td>
+			  <td>In asteptare</td>
+			</tr>
+			<tr>
+			  <td>3</td>
+			  <td>Mihai</td>
+			  <td>Popescu</td>
+			  <td>I</td>
+			  <td>Sociala</td>
+			   <td><button class="btn btn-info modalButton" id="3">Vezi Bursa</button></td>
+			  <td>In asteptare</td>
+			</tr>
+			<tr>
+			  <td>4</td>
+			  <td>George</td>
+			  <td>Ionescu</td>
+			  <td>III</td>	 
+			  <td>Orfan</td>
+			   <td><button class="btn btn-info modalButton" id="4">Vezi Bursa</button></td>
+			  <td>In asteptare</td>
+			</tr>
+		</table>
+	</div>
 	<div class="modal hide fade" id="metodologieModal">
 	    <div class="modal-header">
 	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -89,19 +259,18 @@
 	    <button type="button" class="btn btn-success" data-dismiss="modal" aria-hidden="true">OK</button>
 
 	    </div>
-    	
-	<div class="clearfix"></div>
-    
-    		
+    </div>
 	</div>
 	<div class="bottom-logo">
 		<img src="/assets/logo.png" width="150px" height="150px"/>
 		</div>
 
+		
+
 	
 	<script type="text/javascript">
 	   $("#wizard").bwizard();
-	   	function showModal(){
+	function showModal(){
 	   $("#metodologieModal").modal('show') ;
 	 }
 	
@@ -109,4 +278,36 @@
 		var id = this.id;
 		var modalNou = '#modal' + id;
 		$(modalNou).modal('show');
+	 });
+
+	 $(document).ready(function()
+	 {
+	 	$(".rez").hide();
+	 	$(".nerez").hide();
+	 });
+
+	 function cereriNerezolvate(){
+	 	$("#param").removeClass('active');
+	 	$("#rezolvate").removeClass('active');
+	 	$("#nerezolvate").addClass('active');
+	 	$(".nerez").show();
+	 	$(".paramselect").hide();
+	 	$(".rez").hide();
+	 }
+	  function cereriRezolvate(){
+	 	$("#param").removeClass('active');
+	 	$("#nerezolvate").removeClass('active');
+	 	$("#rezolvate").addClass('active');
+	 	$(".rez").show();
+	 	$(".nerez").hide();
+	 	$(".paramselect").hide();
+	 }
+	  function paramSel(){
+	  	$("#rezolvate").removeClass('active');
+	 	$("#nerezolvate").removeClass('active');
+	 	$("#param").addClass('active');
+	 	$(".rez").hide();
+	 	$(".nerez").hide();
+	 	$(".paramselect").show();
+	 }
 	</script>
