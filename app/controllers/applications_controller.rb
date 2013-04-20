@@ -83,7 +83,7 @@ class ApplicationsController < ApplicationController
     @scholarship = Scholarship.find(params[:scholarship_id])
     @user = User.last()
 
-    logger.info("@APPLICATIONS " + @applications[3]["status"])
+    logger.info("@APPLICATIONS " + @applications[1]["status"])
     puts @applications
     
     respond_to do |format|

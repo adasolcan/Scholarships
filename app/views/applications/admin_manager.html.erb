@@ -85,42 +85,17 @@
 				<th>Status</th>
 				
 			</tr>
+			<% @applications.each do |application| %>
 			<tr>
-			  <td>1</td>
-			  <td><%= @user.show_by_id({:id => @applications[3]["user_id"]})[0]["first_name"] %></td>
-			  <td><%= @user.show_by_id({:id => @applications[3]["user_id"]})[0]["last_name"] %></td>
-			  <td><%= @user.show_details_by_id({:id => @user.show_by_id({:id => @applications[3]["user_id"]})[0]["uid"], :token => @current_user.token})["user"]["student"]["class_year"] %></td>	 
-			  <td> <%= @scholarship.show_by_id({:id => @applications[3]["scholarship_id"]})[0]["stype"] %> </td>
+			  <td><%= application["user_id"] %></td>
+			  <td><%= @user.show_by_id({:id => application["user_id"]})[0]["first_name"] %></td>
+			  <td><%= @user.show_by_id({:id => application["user_id"]})[0]["last_name"] %></td>
+			  <td><%= @user.show_details_by_id({:id => @user.show_by_id({:id => application["user_id"]})[0]["uid"], :token => @current_user.token})["user"]["student"]["class_year"] %></td>	 
+			  <td> <%= @scholarship.show_by_id({:id => application["scholarship_id"]})[0]["stype"] %> </td>
 			  <td><button class="btn btn-info modalButton" id="1">Vezi Bursa</button></td>
-			  <td> <%= @applications[3]["status"] %> </td>
+			  <td> <%= application["reason"] %> </td>
 			</tr>
-			<tr>
-			  <td>2</td>
-			  <td>Vasile</td>
-			  <td>Georgescu</td>
-			  <td>II</td>
-			  <td>Sociala</td>
-			   <td><button class="btn btn-info modalButton" id="2">Vezi Bursa</button></td>
-			  <td>In asteptare</td>
-			</tr>
-			<tr>
-			  <td>3</td>
-			  <td>Mihai</td>
-			  <td>Popescu</td>
-			  <td>I</td>
-			  <td>Sociala</td>
-			   <td><button class="btn btn-info modalButton" id="3">Vezi Bursa</button></td>
-			  <td>In asteptare</td>
-			</tr>
-			<tr>
-			  <td>4</td>
-			  <td>George</td>
-			  <td>Ionescu</td>
-			  <td>III</td>	 
-			  <td>Orfan</td>
-			   <td><button class="btn btn-info modalButton" id="4">Vezi Bursa</button></td>
-			  <td>In asteptare</td>
-			</tr>
+            <% end %>
 		</table>
 			
 	
