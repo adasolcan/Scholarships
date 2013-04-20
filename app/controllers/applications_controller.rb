@@ -78,7 +78,12 @@ class ApplicationsController < ApplicationController
     @application = Application.find_by_scholarship_id(params[:scholarship_id])
     @applications = @application.show_manager({:class_year => params[:class_year], :specialization => params[:specialization], :scholarship_id => params[:scholarship_id]})
 
-    logger.info("@APPLICATIONS " + @applications[1]["status"])
+	logger.info("@applications.size = " + @applications.size.to_s);
+
+    @scholarship = Scholarship.find(params[:scholarship_id])
+    @user = User.last()
+
+    logger.info("@APPLICATIONS " + @applications[3]["status"])
     puts @applications
     
     respond_to do |format|

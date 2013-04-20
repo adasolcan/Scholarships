@@ -16,7 +16,7 @@
         		<ul class="nav pull-right">
         		<li><a onclick="showModal()">Metodologie</a></li>
         		<li class="divider-vertical"></li>
-        		<li><a href="../logout">Iesire</a></li>
+        		<li><a href="../../../../logout">Iesire</a></li>
         		</ul>
         	</div>
         </div>
@@ -87,12 +87,12 @@
 			</tr>
 			<tr>
 			  <td>1</td>
-			  <td>Andrei</td>
-			  <td>Popescu</td>
-			  <td>I</td>	 
-			  <td>Merit</td>
+			  <td><%= @user.show_by_id({:id => @applications[3]["user_id"]})[0]["first_name"] %></td>
+			  <td><%= @user.show_by_id({:id => @applications[3]["user_id"]})[0]["last_name"] %></td>
+			  <td><%= @user.show_details_by_id({:id => @user.show_by_id({:id => @applications[3]["user_id"]})[0]["uid"], :token => @current_user.token})["user"]["student"]["class_year"] %></td>	 
+			  <td> <%= @scholarship.show_by_id({:id => @applications[3]["scholarship_id"]})[0]["stype"] %> </td>
 			  <td><button class="btn btn-info modalButton" id="1">Vezi Bursa</button></td>
-			  <td><%= @applications[1]["status"] %></td>
+			  <td> <%= @applications[3]["status"] %> </td>
 			</tr>
 			<tr>
 			  <td>2</td>

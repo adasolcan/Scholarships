@@ -2,4 +2,8 @@ class Scholarship < ActiveRecord::Base
   attr_accessible :stype, :value
 
   has_many :application, :foreign_key => "scholarship_id" 
+
+  def show_by_id(options={})
+    Scholarship.where(id: options[:id])
+  end
 end
