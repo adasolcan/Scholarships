@@ -1,0 +1,112 @@
+	<link href="/assets/bootstrap.css" rel="stylesheet" />
+	<style>body{padding-top: 60px;}</style>
+	<link href="/assets/bootstrap-responsive.css" rel="stylesheet" />
+	<link href="/assets/bwizard.min.css" rel="stylesheet" />
+	<script src="/assets/jquery.min.js"></script>
+	<script src="/assets/bootstrap.min.js"></script>
+	<script src="/assets/bwizard.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">      
+        	<a class="brand" href="/">Burse</a>
+        	<div class="nav-collapse collapse nav-bar-inverse-collapse">
+        		<ul class="nav pull-right">
+        		<li><a onclick="showModal()">Metodologie</a></li>
+        		<li class="divider-vertical"></li>
+        		<li><a href="../logout">Iesire</a></li>
+        		</ul>
+        	</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container-narrow">
+    	
+	<div class="masthead">
+        <div class="navbar navbar-static">
+           <div class="navbar-inner">
+            <a class="brand" href="">Admin</a>
+              <div class="container" style="width: auto;">
+                <ul class="nav">
+                  <li><a href="#">Cereri nerezolvate</a></li>
+                  
+                  <li><a href="">Cereri rezolvate</a></li>
+                  <li class="active"><a href="">Setare Parametri</a></li>
+              </div>
+            </div>
+          </div>
+    </div>
+      
+    <div class="well">
+    	<table class="table table-striped" style="margin-top:10px; float:left;">
+			<tr>
+				<th>An studii</th>
+				<th>Seria</th>
+				<th>Seria</th>
+				<th>Locuri disponibile</th>
+			</tr>
+			<tr>
+			  <td>An I</td>
+			  <td>Informatica</td>
+			  <td>Informatica</td>
+			 	 
+			  <td><input type="text" id="" name="" placeholder="Numar locuri"/></td>
+			</tr>
+			<tr>
+			  <td>An I</td>
+			  <td>Informatica</td>
+			  <td>Informatica</td>
+			 	 
+			  <td><input type="text" id="" name="" placeholder="Numar locuri"/></td>
+			</tr><tr>
+			  <td>An I</td>
+			  <td>Informatica</td>
+			  <td>Informatica</td>
+			  	 
+			  <td><input type="text" id="" name="" placeholder="Numar locuri"/></td>
+			</tr><tr>
+			  <td>An I</td>
+			  <td>Informatica</td>
+			  <td>Informatica</td>
+			  	 
+			  <td><input type="text" id="" name="" placeholder="Numar locuri"/></td>
+			</tr>
+		</table>
+			
+	<input type="button" class="btn btn-primary pull-right fixed-bottom" value="Actulizare informatii"/>
+	<div class="modal hide fade" id="metodologieModal">
+	    <div class="modal-header">
+	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	    <h3>Descriere metodologie</h3>
+	    </div>
+		    <div class="modal-body">
+		    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		    </div>
+	    <div class="modal-footer">
+	    <button type="button" class="btn btn-success" data-dismiss="modal" aria-hidden="true">OK</button>
+
+	    </div>
+    	
+	<div class="clearfix"></div>
+    
+    		
+	</div>
+	<div class="bottom-logo">
+		<img src="/assets/logo.png" width="150px" height="150px"/>
+		</div>
+
+	
+	<script type="text/javascript">
+	   $("#wizard").bwizard();
+	   	function showModal(){
+	   $("#metodologieModal").modal('show') ;
+	 }
+	
+	 $(".modalButton").click(function(){
+		var id = this.id;
+		var modalNou = '#modal' + id;
+		$(modalNou).modal('show');
+	</script>
