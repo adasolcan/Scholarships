@@ -13,6 +13,7 @@ Team9Scholarships::Application.routes.draw do
   match '/logout', :to => 'user_sessions#destroy'
 
   match '/manager', :to => 'applications#admin_manager'
+  match '/admin', :to => 'applications#admin'
   #students by specialization
    
 end

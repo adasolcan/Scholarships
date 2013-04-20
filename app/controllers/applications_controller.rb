@@ -16,6 +16,12 @@ class ApplicationsController < ApplicationController
 			format.json { render json: @applications }
     	end
 	end
+	if @current_user.is_admin == "true"
+      respond_to do |format|
+		format.html { redirect_to '/admin' }
+		format.json { render json: @applications }
+      end
+   end 
 	if @current_user.is_student == "true"
         respond_to do |format|
           format.html # index.html.erb
@@ -25,6 +31,9 @@ class ApplicationsController < ApplicationController
   end
 	
   def admin_manager
+  end
+  
+  def admin
   end
 
   # GET /applications/1
