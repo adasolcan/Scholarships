@@ -91,8 +91,10 @@
 			  <td><%= @user.show_by_id({:id => application["user_id"]})[0]["last_name"] %></td>
 			  <td><%= @user.show_details_by_id({:id => @user.show_by_id({:id => application["user_id"]})[0]["uid"], :token => @current_user.token})["user"]["student"]["class_year"] %></td>	 
 			  <td> <%= @scholarship.show_by_id({:id => application["scholarship_id"]})[0]["stype"] %> </td>
-			  <td><button class="btn btn-info modalButton" id="1">Vezi Bursa</button></td>
+			  <td><button class="btn btn-info modalButton" onclick="myFunction(id)">Vezi Bursa</button></td>
+			
 			  <td> <%= application["reason"] %> </td>
+			
 			</tr>
             <% end %>
 		</table>
@@ -151,6 +153,12 @@
 	
 	<script type="text/javascript">
 	   $("#wizard").bwizard();
+	   
+	   	function myFunction(id)
+		{
+		  	alert("show bursa"+id);
+		}
+	   
 	function showModal(){
 	   $("#metodologieModal").modal('show') ;
 	 }
@@ -167,7 +175,7 @@
 		var domeniuStudiu=$('#domeniuStudiu :selected').val();
 		var tipBursa=$('#tipBursa :selected').val();
 		var url = "/manager/new"; 
-			alert("An"+ anStudiu + " Domeniu" + domeniuStudiu+ " Tip Bursa"+ tipBursa);
+		alert("An"+ anStudiu + " Domeniu" + domeniuStudiu+ " Tip Bursa"+ tipBursa);
 
     	 $.ajax({
             type: "POST",
@@ -178,5 +186,11 @@
                 console.debug('Applications refresh succesfully');
               }});
 		});
+		
+		$('#showbursa').click(function(){
+	
+		});
+		
+	
 		
 	</script>
