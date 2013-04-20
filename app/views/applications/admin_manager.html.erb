@@ -46,6 +46,7 @@
 	    			<option>1</option>
 	    			<option>2</option>
 	    			<option>3</option>
+                    <option>4</option>
 	    		</select>
 	    	</div>
 	    	<div class="span3">
@@ -53,6 +54,7 @@
 	    		<select class="span3">
 	    			<option>Matematica</option>
 	    			<option>Informatica</option>
+                    <option>CTI</option>
 	    		</select>
 	    	</div>
 	    	<div class="span4">
@@ -90,7 +92,7 @@
 			  <td>I</td>	 
 			  <td>Merit</td>
 			  <td><button class="btn btn-info modalButton" id="1">Vezi Bursa</button></td>
-			  <td>In asteptare</td>
+			  <td><%= @applications[1]["status"] %></td>
 			</tr>
 			<tr>
 			  <td>2</td>

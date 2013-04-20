@@ -3,4 +3,8 @@ class Application < ActiveRecord::Base
 
   belongs_to :scholarship
   belongs_to :user
+
+  def show_manager(options={})
+    Application.where(scholarship_id: options[:scholarship_id])
+  end
 end

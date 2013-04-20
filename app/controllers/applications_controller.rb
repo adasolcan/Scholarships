@@ -12,7 +12,7 @@ class ApplicationsController < ApplicationController
     @applications = Application.all
 	if @current_user.is_management == "true" 
 		respond_to do |format|
-			format.html { redirect_to '/manager' }
+			format.html { redirect_to '/applications/0/0/1/manager' }
 			format.json { render json: @applications }
     	end
 	end
@@ -30,12 +30,6 @@ class ApplicationsController < ApplicationController
     end
   end
 	
-  def admin_manager
-  end
-  
-  def admin
-  end
-
   # GET /applications/1
   # GET /applications/1.json
   def show
@@ -69,12 +63,33 @@ class ApplicationsController < ApplicationController
 	logger.info("RESULT = " + @result.inspect)
 	logger.info("RESULT.GROUP_ID = " +@result["user"]["student"]["group_id"].to_s)
     @scholarship_id = params[:scholarship_id]
-	#puts @result
+	puts @result
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @application }
     end
   end
+
+  def admin_manager
+    @class_year = params[:class_year]
+    @specialization = params[:specialization]
+    @scholarship_id = params[:scholarship_id]
+
+    @application = Application.find_by_scholarship_id(params[:scholarship_id])
+    @applications = @application.show_manager({:class_year => params[:class_year], :specialization => params[:specialization], :scholarship_id => params[:scholarship_id]})
+
+    logger.info("@APPLICATIONS " + @applications[1]["status"])
+    puts @applications
+    
+    respond_to do |format|
+      format.html
+      format.json { render json: @applications }
+    end    
+  end
+  
+  def admin
+  end
+
 
   # GET /applications/1/edit
   def edit
