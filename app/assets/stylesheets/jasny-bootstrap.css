@@ -61,7 +61,7 @@
 }
 
 form > *:last-child {
-  margin-bottom: 0;
+  
 }
 
 label input[type="image"],
@@ -118,7 +118,7 @@ select {
 }
 
 form .well > *:last-child {
-  margin-bottom: 0;
+  
 }
 
 .editor {

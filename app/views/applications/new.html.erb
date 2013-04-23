@@ -163,7 +163,7 @@ body{padding-top: 60px;}
 							</th>
 							<td>
                                 <%= f.select :on_card, [['Nu', 0], ['Da', 1]] %>                 
-								<div id="IBAN" style="display:inline"> <b>&nbsp; IBAN:</b> 5123412</div>
+								<div id="IBAN" style="display:block"> <b>&nbsp; IBAN:</b> 5123412</div>
 							</td>
 						</tr>
 						<tr>
@@ -231,10 +231,13 @@ body{padding-top: 60px;}
                         <%= f.hidden_field :submission_date, :value => Date.today.to_s %>
                         <%= f.hidden_field :status, :value => "In asteptare" %>
                         <%= f.hidden_field :scholarship_id, :value => @scholarship_id %>
-
+                    </h4>
                         <%# logger.info("USER ID = " + @current_user.id.to_s + " app.USER_ID= ")%>
-                        <%= f.submit "Depune cererea"%>
-					</h4>
+                        <ul class="pager" style="z-index:2">
+                        		<a style="position:absolute; left:626px; bottom:1px">
+                        		<%= f.submit "Depune cererea", :class => 'btn bwizard-buttons next' %>
+                        		</a>
+                    	</ul>			
 				</div>
 			</div>
 		</div>
