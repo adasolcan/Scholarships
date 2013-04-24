@@ -46,6 +46,7 @@
 	    			<option value="1">1</option>
 	    			<option value="2">2</option>
 	    			<option value="3">3</option>
+				<option value="4">4</option>
 	    		</select>
 	    	</div>
 	    	<div class="span3">
@@ -89,11 +90,11 @@
 			  <td><%= application["user_id"] %></td>
 			  <td><%= @user.show_by_id({:id => application["user_id"]})[0]["first_name"] %></td>
 			  <td><%= @user.show_by_id({:id => application["user_id"]})[0]["last_name"] %></td>
-			  <td><%= @user.show_details_by_id({:id => @user.show_by_id({:id => application["user_id"]})[0]["uid"], :token => @current_user.token})["user"]["student"]["class_year"] %></td>	 
+			  <td><%= @user.show_details_by_id({:id => @user.show_by_id({:id => application["user_id"]})[0]["uid"], :token => @current_user.token})["user"]["group"]["year"] %></td>	 
 			  <td> <%= @scholarship.show_by_id({:id => application["scholarship_id"]})[0]["stype"] %> </td>
 			  <td><button class="btn btn-info modalButton" onclick="myFunction(id)">Vezi Bursa</button></td>
 			
-			  <td> <%= application["reason"] %> </td>
+			  <td> <%= application["status"] %> </td>
 			
 			</tr>
             <% end %>
