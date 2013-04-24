@@ -5,6 +5,11 @@ class Application < ActiveRecord::Base
   belongs_to :user
 
   def show_manager(options={})
-    Application.where(scholarship_id: options[:scholarship_id])
+ 
+  @all_applications = Application.where(scholarship_id: options[:scholarship_id])
+
+  return @all_applications
+
+  logger.info("SUNT IN FUNCTIA SHOW_MANAGER")
   end
 end
