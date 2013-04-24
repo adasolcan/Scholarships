@@ -61,7 +61,7 @@ class ApplicationsController < ApplicationController
 	@user_token = @current_user.token
 	@result = JSON.parse(open("http://fmi-autentificare.herokuapp.com/users/#{@current_user.uid}.json?oauth_token=#{@current_user.token}").read)
 	logger.info("RESULT = " + @result.inspect)
-	logger.info("RESULT.GROUP_ID = " +@result["user"]["student"]["group_id"].to_s)
+	logger.info("RESULT.CLASS_YEAR = " +@result["user"]["student"]["class_year"].to_s)
     @scholarship_id = params[:scholarship_id]
 	puts @result
     respond_to do |format|
