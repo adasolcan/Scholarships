@@ -87,7 +87,7 @@
 			</tr>
 			<% @applications.each do |application| %>
 			<tr>
-			  <td><%= application["user_id"] %></td>
+			  <td><%= @contor = 1 + @contor %></td>
 			  <td><%= @user.show_by_id({:id => application["user_id"]})[0]["first_name"] %></td>
 			  <td><%= @user.show_by_id({:id => application["user_id"]})[0]["last_name"] %></td>
 			  <td><%= @user.show_details_by_id({:id => @user.show_by_id({:id => application["user_id"]})[0]["uid"], :token => @current_user.token})["user"]["group"]["year"] %></td>	 

@@ -86,6 +86,8 @@ class ApplicationsController < ApplicationController
     logger.info("@APPLICATIONS " + @applications[1]["status"])
     puts @applications
     
+    @contor = 0;
+	
     respond_to do |format|
       format.html
       format.json { render json: @applications }
