@@ -67,14 +67,15 @@ body{padding-top: 60px;}
         <div class="well">
           <div style=" padding-top:70px;  margin-left:50px; padding-bottom:50px; margin-right: auto;">
 
+
 <p>
   <b>Nume:</b>
-  <%= @user.show_by_id({:id => @application.id })[0]["first_name"] %>
+  <%= @user.show_by_id({:id => @application.user_id })[0]["first_name"] %>
 </p>
-
 
 <p>
   <b>Prenume:</b>
+  <%= @user.show_by_id({:id => @application.user_id })[0]["last_name"] %>
 </p>
 
 <p>
@@ -83,7 +84,7 @@ body{padding-top: 60px;}
 </p>
 
 <p>
-  <b>Submission date:</b>
+  <b>Data depunere:</b>
   <%= @application.submission_date.strftime("%d-%m-%Y") %>
 </p>
 
@@ -101,7 +102,7 @@ body{padding-top: 60px;}
   Da
   <p>
     <b> IBAN <b>
-    <%= %>
+    <%= @user.show_by_id({:id => @application.user_id })[0]["iban"] %>
   </p>
   <% end %>
 </p>

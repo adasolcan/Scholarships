@@ -35,6 +35,8 @@ class ApplicationsController < ApplicationController
   def show
     @application = Application.find(params[:id])
 
+   @user = User.last();
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @application }

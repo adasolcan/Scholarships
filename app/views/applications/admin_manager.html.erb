@@ -92,7 +92,7 @@
 			  <td><%= @user.show_by_id({:id => application["user_id"]})[0]["last_name"] %></td>
 			  <td><%= @user.show_details_by_id({:id => @user.show_by_id({:id => application["user_id"]})[0]["uid"], :token => @current_user.token})["user"]["group"]["year"] %></td>	 
 			  <td> <%= @scholarship.show_by_id({:id => application["scholarship_id"]})[0]["stype"] %> </td>
-			  <td><button class="btn btn-info modalButton" onclick="myFunction(id)">Vezi Bursa</button></td>
+			  <td><button class="btn btn-info modalButton" id="@application.id"> Vezi Cerere</button></td>
 			
 			  <td> <%= application["status"] %> </td>
 			
@@ -115,7 +115,7 @@
 	    </div>
     </div>
     
-    <div class="modal hide fade" id="modal1">
+    <div class="modal hide fade" id="modalCerere">
 	    <div class="modal-header">
 	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 	    <h3>Bursa de merit</h3>
@@ -166,8 +166,8 @@
 	
 	 $(".modalButton").click(function(){
 		var id = this.id;
-		var modalNou = '#modal' + id;
-		$(modalNou).modal('show');
+		$(modalCerere).modal('show');
+		alert(id);
 	 });
 	 
 	 
