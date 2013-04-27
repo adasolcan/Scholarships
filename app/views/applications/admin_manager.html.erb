@@ -171,26 +171,34 @@
 	 });
 	 
 	 
-	  $('#actualizareBurse').click(function(){
+	 $('#actualizareBurse').click(function(){
 		var anStudiu=$('#anStudiu :selected').val();
 		var domeniuStudiu=$('#domeniuStudiu :selected').val();
 		var tipBursa=$('#tipBursa :selected').val();
-		var url = "/0/0/2/manager"; 
-		alert("An"+ anStudiu + " Domeniu" + domeniuStudiu+ " Tip Bursa"+ tipBursa);
-
-    	 $.ajax({
-            type: "POST",
+		var url = "http://localhost:3000/applications/"+ anStudiu + "/"+domeniuStudiu+"/"+tipBursa+"/manager"; 
+		//alert("An"+ anStudiu + " Domeniu" + domeniuStudiu+ " Tip Bursa"+ tipBursa);
+		//alert(url);
+    	$.ajax({
+            type: "GET",
             url: url,
-            dataType: "html",
-            data: {an:anStudiu, domeniu:domeniuStudiu, bursa:tipBursa},
-            success: function(data) {                
-                console.debug('Applications refresh succesfully');
-              }});
-		});
+            data: {
+            	an:$('#anStudiu :selected').val(), 
+            	domeniu:$('#domeniuStudiu :selected').val(), 
+            	bursa:$('#tipBursa :selected').val()},
+            success: function(content,code) {
+            	//debugger;
+            	//alert(code);
+            	$('body').html(content);
+        	},
+ 			error: function(error){
+                alert(error);
+            }
+          });
+	  });
 		
-		$('#showbursa').click(function(){
+	  $('#showbursa').click(function(){
 	
-		});
+	  });
 		
 	
 		
