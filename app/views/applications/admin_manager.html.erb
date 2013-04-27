@@ -61,6 +61,7 @@
 	    	</div>
 	    	<div class="span4">
 	    		<label >Tip Bursa</label>
+	    		<%= select("tipBursa", "scholarship_id", Scholarship.all.collect {|p| [ p.stype, p.id ] }, {:prompt => 'Toate tipurile', :value => '0'})%>
 	    		<select class="span4" id="tipBursa">
 	    			<option value="0">Toate tipurile</option>
 	    			<option value="1">Performanta</option>
