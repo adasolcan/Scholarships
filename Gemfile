@@ -18,7 +18,6 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem 'omniauth'
   gem 'omniauth-oauth2'
-  gem 'carrierwave'
 end
 
 group :development do
@@ -30,6 +29,7 @@ group :production, :testing do
 end
 
 gem 'jquery-rails'
+gem 'carrierwave'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
