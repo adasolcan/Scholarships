@@ -18,6 +18,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem 'omniauth'
   gem 'omniauth-oauth2'
+  gem 'carrierwave'
 end
 
 group :development do
