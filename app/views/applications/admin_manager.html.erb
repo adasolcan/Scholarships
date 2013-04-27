@@ -61,10 +61,19 @@
 	    	</div>
 	    	<div class="span4">
 	    		<label >Tip Bursa</label>
-	    		<%= select("tipBursa", "scholarship_id", Scholarship.all.collect {|p| [ p.stype, p.id ] }, {:prompt => 'Toate tipurile', :value => '0'})%>
+	    		<%# select("tipBursa", "scholarship_id", Scholarship.all.collect {|p| [ p.stype, p.id ] }, { :selected => @scholarship_id })%>
+	    		<%= options_for_select([["Dollar", "$"], ["Kroner", "DKK"]])%>
 	    		<select class="span4" id="tipBursa">
-	    			<option value="0">Toate tipurile</option>
-	    			<option value="1">Performanta</option>
+	    			<% if (@scholarship_id == "0") %>
+	    				<option value="0" selected="selected">Toate tipurile</option>
+	    			<% else %>
+	    				<option value="0">Toate tipurile</option>
+	    			<% end %>
+	    			<% if (@scholarship_id == "1") %>
+	    				<option value="1" selected="selected">Performanta</option>
+	    			<% else %>
+	    				<option value="1">Performanta</option>
+	    			<% end %>
 	    			<option value="2">Merit</option>
 	    			<option value="3">Sociala</option>
 	    			<option value="4">Sociala ocazionala</option>
