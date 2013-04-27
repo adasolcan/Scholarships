@@ -4,12 +4,13 @@ class Application < ActiveRecord::Base
   belongs_to :scholarship
   belongs_to :user
 
-  def show_manager(options={})
+  def show_by_specialization(options={})
  
-  @all_applications = Application.where(scholarship_id: options[:scholarship_id])
+  	@all_applications = Application.joins('JOIN user ON applications.user_id = participates.concert_id').where('participates.user_id = \'' + options[:user_id]+'\'')
+  	where(scholarship_id: options[:scholarship_id])
 
-  return @all_applications
+  	return @all_applications
 
-  logger.info("SUNT IN FUNCTIA SHOW_MANAGER")
+  	logger.info("SUNT IN FUNCTIA SHOW_MANAGER")
   end
 end
