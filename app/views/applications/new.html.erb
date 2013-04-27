@@ -35,6 +35,7 @@ body{padding-top: 60px;}
 						<ul class="nav pull-right">
 							<li>
 								<a onclick="showModal()">Metodologie</a>
+
 							</li>
 							<li>
 								<a href="../logout">Iesire</a>
@@ -318,11 +319,6 @@ body{padding-top: 60px;}
 		});
 
 
-		$('#triggerUpload').click(function(){
-		var uploadedFileNames =  $('.qq-upload-file').text();
-		alert("yes"+uploadedFileNames);
-		});
-
 			var manualuploader = new qq.FineUploader({
 			element: $('#manual-fine-uploader')[0],
 			request: {
@@ -339,24 +335,32 @@ body{padding-top: 60px;}
 		'<ul class="qq-upload-list" style="margin-top: 10px; text-align: center;"><\/ul>' +
 		'<\/div>',
 			});
-			$('#triggerUpload').click(function() {
-			manualuploader.uploadStoredFiles();
-			});
+
+			
 		});
 
 		</script>
 		
 		<script type="text/javascript">
 		$("#wizard").bwizard();
+
 		function showModal(){
-		$("#metodologieModal").modal('show') ;
+		  $("#metodologieModal").modal('show');
 		}
+		
 
 		$(".modalButton").click(function(){
 		var id = this.id;
 		var modalNou = '#modal' + id;
 		$(modalNou).modal('show');
 		});
+
+			$('#triggerUpload').click(function() {
+			debugger;
+			var uploadedFileNames =  $('.qq-upload-file').text();
+			alert("yes"+uploadedFileNames);
+			manualuploader.uploadStoredFiles();
+			});
 		</script>
 		<% end%>
 	</body>
