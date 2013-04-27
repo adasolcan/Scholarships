@@ -164,8 +164,8 @@
 	 $(".modalButton").click(function(){
 	  var applicationId=this.id;
 	  	$("#modalCerere").modal('show');
-	  	$("p").text("Cererea cu id "+applicationId);
-	  	
+	  	$("p").load("/applications/"+applicationId+" #showDetails");
+	  	$("#showDetails").css("height","250px");
 	 });	
 	   
 	   
