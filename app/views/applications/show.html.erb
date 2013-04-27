@@ -45,22 +45,36 @@ body{padding-top: 60px;}
     </div>
     <div class="container-narrow">
       <div class="masthead">
-        <h4 class="title">Bursa</h4>
+        <h4 class="title">
+          
+          <% case @application.scholarship_id %>
+          <% when 1 %>  
+          <p>Bursa de perfomanta</p>
+          <% when 2 %>  
+          <p>Bursa de studiu/merit</p>
+          <% when 3 %>  
+          <p>Bursa sociala</p>
+          <% when 4 %> 
+           <p>Bursa sociala ocazionala</p>
+          <% when 5 %> 
+           <p>Bursa medicala</p>
+          <% when 6 %>  
+          <p>Bursa sociala orfan</p>
+          
+        <% end %>
+          
+        </h4>
         <div class="well">
-          <div style=" padding-top:50px;  margin-left:50px; margin-right: auto;">
-<p>
-  <b>Id:</b>
-  <%= @application.id %>
-</p>
+          <div style=" padding-top:70px;  margin-left:50px; padding-bottom:50px; margin-right: auto;">
 
 <p>
-  <b>Submission date:</b>
-  <%= @application.submission_date %>
+  <b>Nume:</b>
+  <%= @user.show_by_id({:id => @application.id })[0]["first_name"] %>
 </p>
 
+
 <p>
-  <b>Approval date:</b>
-  <%= @application.approval_date %>
+  <b>Prenume:</b>
 </p>
 
 <p>
@@ -69,19 +83,27 @@ body{padding-top: 60px;}
 </p>
 
 <p>
-  <b>Reason:</b>
+  <b>Submission date:</b>
+  <%= @application.submission_date.strftime("%d-%m-%Y") %>
+</p>
+
+<p>
+  <b>Motiv de aplicare:</b>
   <%= @application.reason %>
 </p>
 
-
 <p>
-  <b>Scholarship_id:</b>
-  <%= @application.scholarship_id %>
-</p>
-
-<p>
-  <b>On_card:</b>
-  <%= @application.on_card %>
+  <b>Depunere pe card:</b>
+  <% case @application.on_card %>
+  <% when 0 %>
+  Nu
+  <% when 1 %>
+  Da
+  <p>
+    <b> IBAN <b>
+    <%= %>
+  </p>
+  <% end %>
 </p>
 </div>
 </div>
