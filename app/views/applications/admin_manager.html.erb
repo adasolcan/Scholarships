@@ -74,11 +74,31 @@
 	    			<% else %>
 	    				<option value="1">Performanta</option>
 	    			<% end %>
-	    			<option value="2">Merit</option>
-	    			<option value="3">Sociala</option>
-	    			<option value="4">Sociala ocazionala</option>
-	    			<option value="5">Medicala</option>
-	    			<option value="6">Sociala orfan</option>
+	    			<% if (@scholarship_id == "2") %>
+	    				<option value="2" selected="selected">Merit</option>
+	    			<% else %>
+	    				<option value="2">Merit</option>
+	    			<% else %>
+	    			<% if (@scholarship_id == "3") %>
+	    				<option value="3" selected="selected">Sociala</option>
+	    			<% else %>
+	    				<option value="3">Sociala</option>
+	    			<% end %>
+	    			<% if (@scholarship_id == "4") %>
+	    				<option value="4" selected="selected">Sociala ocazionala</option>
+	    			<% else %>
+	    				<option value="4">Sociala ocazionala</option>
+	    			<% end %>
+	    			<% if (@scholarship_id == "5") %>
+	    				<option value="5" selected="selected">Medicala</option>
+	    			<% else %>
+	    				<option value="5">Medicala</option>
+	    			<% end %>
+	    			<% if (@scholarship_id == "6") %>
+	    				<option value="6" selected="selected">Sociala orfan</option>
+	    			<% else %>
+	    				<option value="6">Sociala orfan</option>
+	    			<% end %>
 	    		</select>
 	    	</div>
 	    	<div class="span2 offset1">
