@@ -92,16 +92,13 @@
 			  <td><%= @user.show_by_id({:id => application["user_id"]})[0]["last_name"] %></td>
 			  <td><%= @user.show_details_by_id({:id => @user.show_by_id({:id => application["user_id"]})[0]["uid"], :token => @current_user.token})["user"]["group"]["year"] %></td>	 
 			  <td> <%= @scholarship.show_by_id({:id => application["scholarship_id"]})[0]["stype"] %> </td>
-<<<<<<< HEAD
-			  <td><button class="btn btn-info modalButton" id="@application.id"> Vezi Cerere</button></td>
+			  <!--<td><button class="btn btn-info modalButton" id="@application.id"> Vezi Cerere</button></td>-->
 			
 			  <td> <%= application["status"] %> </td>
-=======
 			  <!--<td><button class='btn btn-info modalButton' param-del="#{application.id}"> Vezi bursa </button></td>-->
 			   <td> <%= content_tag(:button, "Vezi Cerere", :class => "btn btn-info modalButton", :id=> application.id)  -%> </td>
 		
 			  <td> <%= application["reason"] %> </td>
->>>>>>> Show the right application to the manager
 			
 			</tr>
             <% end %>
@@ -122,10 +119,8 @@
 	    </div>
     </div>
     
-<<<<<<< HEAD
-=======
-    <!-- MODAL PENTRU VIZUALIZARE CERERE --!>
->>>>>>> Show the right application to the manager
+
+    <!-- MODAL PENTRU VIZUALIZARE CERERE -->
     <div class="modal hide fade" id="modalCerere">
 	    <div class="modal-header">
 	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
