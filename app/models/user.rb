@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
     JSON.parse(open("http://fmi-autentificare.herokuapp.com/users/#{options[:id]}.json?oauth_token=#{options[:token]}").read)
   end
 
-  def show_details_by_year(options={})
+  def show_students_by_year(options={})
    JSON.parse(open("http://fmi-autentificare.herokuapp.com/groups/year/#{options[:year]}.json?oauth_token=#{options[:token]}").read)
   end
 end
