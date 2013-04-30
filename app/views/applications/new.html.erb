@@ -230,7 +230,7 @@ body{padding-top: 60px;}
 						Cererea poate fi depusa.
 						<%= f.hidden_field :user_id, :value => @current_user.id %>
                         <%= f.hidden_field :submission_date, :value => Date.today.to_s %>
-                        <%= f.hidden_field :status, :value => "Cerere depusa" %>
+                        <%= f.hidden_field :status, :value => "In asteptare" %>
                         <%= f.hidden_field :scholarship_id, :value => @scholarship_id %>
                     </h4>
                         <%# logger.info("USER ID = " + @current_user.id.to_s + " app.USER_ID= ")%>
