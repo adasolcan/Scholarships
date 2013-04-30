@@ -319,24 +319,7 @@ body{padding-top: 60px;}
 		});
 
 
-			var manualuploader = new qq.FineUploader({
-			element: $('#manual-fine-uploader')[0],
-			request: {
-			endpoint: 'server/handleUploads'  /* informatii despre partea de server si cum se trimit datele cu POST
-						 https://github.com/Widen/fine-uploader-server/blob/master/readme.md */
-			},
-			autoUpload: false,
-			text: {
-			uploadButton: '<i class="icon-plus icon-white"><\/i> Alege Fisierul'
-			},
-			 template: '<div class="qq-uploader">' +
-		'<div class="qq-upload-button btn btn-info" style="width: auto;">{uploadButtonText}<\/div>' +
-		'<span class="qq-drop-processing-spinner"><\/span><\/span>' +
-		'<ul class="qq-upload-list" style="margin-top: 10px; text-align: center;"><\/ul>' +
-		'<\/div>',
-			});
 
-			
 		});
 
 		</script>
@@ -349,18 +332,49 @@ body{padding-top: 60px;}
 		}
 		
 
+	        /*$('#triggerUpload').click(function() {
+		//debugger;
+		var uploadedFileNames =  $('.qq-upload-file').text();
+		alert("yes"+uploadedFileNames);
+		manualuploader.uploadStoredFiles();
+		});*/
+
+		var manualuploader = new qq.FineUploader({
+		element: $('#manual-fine-uploader')[0],
+		request: {
+		endpoint: 'http://localhost:3000/upload/handler'  /* informatii despre partea de server si cum se trimit datele cu POST
+					 https://github.com/Widen/fine-uploader-server/blob/master/readme.md */
+		},
+		autoUpload: false,
+		text: {
+		uploadButton: '<i class="icon-plus icon-white"><\/i> Alege Fisierul'
+		},
+	        template: '<div class="qq-uploader">' +
+	'<div class="qq-upload-button btn btn-info" style="width: auto;">{uploadButtonText}<\/div>' +
+	'<span class="qq-drop-processing-spinner"><\/span><\/span>' +
+	'<ul class="qq-upload-list" style="margin-top: 10px; text-align: center;"><\/ul>' +
+	'<\/div>',
+		});
+
+	        $('#triggerUpload').click(function() {
+		debugger;
+		var uploadedFileNames =  $('.qq-upload-file').text();
+		alert("yes"+uploadedFileNames);
+		manualuploader.uploadStoredFiles();
+		});
+		
 		$(".modalButton").click(function(){
 		var id = this.id;
 		var modalNou = '#modal' + id;
 		$(modalNou).modal('show');
 		});
 
-			$('#triggerUpload').click(function() {
-			debugger;
-			var uploadedFileNames =  $('.qq-upload-file').text();
-			alert("yes"+uploadedFileNames);
-			manualuploader.uploadStoredFiles();
-			});
+	        /*$('#triggerUpload').click(function() {
+		debugger;
+		var uploadedFileNames =  $('.qq-upload-file').text();
+		alert("yes"+uploadedFileNames);
+		manualuploader.uploadStoredFiles();
+		});*/
 		</script>
 		<% end%>
 	</body>
