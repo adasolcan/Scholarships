@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   end
 
   def show_students_by_year(options={})
-   JSON.parse(open("http://fmi-autentificare.herokuapp.com/groups/year/#{options[:year]}.json?oauth_token=#{options[:token]}").read)
+    logger.info("SUNT IN FUNCTIA show_students_by_year")
+    JSON.parse(open("http://fmi-autentificare.herokuapp.com/groups/year/#{options[:year]}.json?oauth_token=#{options[:token]}").read)
   end
 end
