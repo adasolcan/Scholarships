@@ -10,11 +10,11 @@ class Application < ActiveRecord::Base
  	@users = @user.show_students_by_year({:year => options[:class_year], :token => options[:token]})
  	logger.info("@USERS.INSPECT = "+@users.inspect)
  	logger.info("@users[0][user][id].to_s = " + @users[0]["user"]["id"].to_s)
- 	@all_applications = Application.joins('JOIN users ON applications.user_id = users.id').where('users.uid = \'' + @users[0]["user"]["id"].to_s + '\'')
+ 	@all_applications = Application.joins('JOIN users ON applications.user_id = users.id').where('status = \'In asteptare\' AND users.uid = \'' + @users[0]["user"]["id"].to_s + '\'')
  	logger.info("@all_applications = " + @all_applications.inspect)
  	@users.each do |user|
  		logger.info("ITERATE : "+user["user"]["id"].to_s);
- 		@application = Application.joins('JOIN users ON applications.user_id = users.id').where('users.uid = \'' + user["user"]["id"].to_s + '\'')
+ 		@application = Application.joins('JOIN users ON applications.user_id = users.id').where('status = \'In asteptare\' AND users.uid = \'' + user["user"]["id"].to_s + '\'')
  		logger.info("@all_applications = " + @all_applications.inspect)
  		@all_applications.merge(@application)
  	end
