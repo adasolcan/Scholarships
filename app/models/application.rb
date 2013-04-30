@@ -14,7 +14,7 @@ class Application < ActiveRecord::Base
  	logger.info("@all_applications = " + @all_applications.inspect)
  	@users.each do |user|
  		logger.info("ITERATE : "+user["user"]["id"].to_s);
- 		@application = Application.joins('JOIN users ON applications.user_id = users.id').where('users.uid = ' + user["user"]["id"].to_s)
+ 		@application = Application.joins('JOIN users ON applications.user_id = users.id').where('users.uid = \'' + user["user"]["id"].to_s + '\'')
  		logger.info("@all_applications = " + @all_applications.inspect)
  		@all_applications.merge(@application)
  	end
