@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-
+//= require fineuploader-3.5.0
+//= require jquery.fineuploader-3.5.0

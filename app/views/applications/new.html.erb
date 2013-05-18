@@ -9,7 +9,7 @@ body{padding-top: 60px;}
 		<link href="/assets/bootstrap-responsive.css" rel="stylesheet" type="text/css">
 		<link href="/assets/bwizard.min.css" rel="stylesheet" type="text/css">
 		<link href="/assets/jasny-bootstrap.css" rel="stylesheet" type="text/css">
-		<link href="/assets/lightbox.css" rel="stylesheet" type="text/css">
+		<!--link href="/assets/lightbox.css" rel="stylesheet" type="text/css"-->
 		<link href="/assets/fu.css" rel="stylesheet" type="text/css">
 		<script src="/assets/jquery.min.js" type="text/javascript">
 </script>
@@ -21,8 +21,15 @@ body{padding-top: 60px;}
 </script>
 		<script src="/assets/burse/jquery.fu.js" type="text/javascript">
 </script>
+
+</script>
 		<script src="/assets/burse/iframe.js" type="text/javascript">
 </script>
+		
+		<!--script src="/assets/fineuploader.js" type="text/javascript">
+</script-->
+		<!--script src="http://code.jquery.com/jquery-latest.js"></script-->
+		<!--script src="fineuploader-{VERSION}.js"></script-->
 		<title></title>
 	</head>
 	<body>
@@ -220,8 +227,9 @@ body{padding-top: 60px;}
 					<div class="span3 offset2 burse-wizzard">
 						<div id="manual-fine-uploader"></div>
 						<div id="triggerUpload" class="btn btn-primary" style="margin-top: 10px;">
-							Upload
+							<i class="icon-upload icon-white"></i>	Upload
 						</div>
+						
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -262,13 +270,57 @@ body{padding-top: 60px;}
 			<img src="/assets/logo.png" width="150px" height="150px">
 		</div>
 		
+		
 		<script type="text/javascript">
 
 		$("#wizard").bwizard();
 		</script>
 		
 		<script type="text/javascript">
+		
+			
+      
+		/*var globalManualUploader  = new qq.FineUploader({
+		element: $('#manual-fine-uploader')[0],
+		request: {
+		endpoint: 'http://localhost:3000/upload/handler' 
+		},
+		autoUpload: false,
+		text: {
+		uploadButton: '<i class="icon-plus icon-white"><\/i> Alege Fisierul'
+		},
+	        template: '<div class="qq-uploader">' +
+	'<div class="qq-upload-button btn btn-info" style="width: auto;">{uploadButtonText}<\/div>' +
+	'<span class="qq-drop-processing-spinner"><\/span><\/span>' +
+	'<ul class="qq-upload-list" style="margin-top: 10px; text-align: center;"><\/ul>' +
+	'<\/div>',
+		});*/
+    
 		$(document).ready(function() {
+		
+		var globalManualUploader  = new qq.FineUploader({
+		element: $('#manual-fine-uploader')[0],
+		request: {
+		endpoint: 'http://localhost:3000/upload/handler' 
+		},
+		autoUpload: false,
+		debug: true,
+		text: {
+		uploadButton: '<i class="icon-plus icon-white"><\/i> Alege Fisierul'
+		},
+	        template: '<div class="qq-uploader">' +
+	'<div class="qq-upload-button btn btn-info" style="width: auto;">{uploadButtonText}<\/div>' +
+	'<span class="qq-drop-processing-spinner"><\/span><\/span>' +
+	'<ul class="qq-upload-list" style="margin-top: 10px; text-align: center;"><\/ul>' +
+	'<\/div>',
+		});
+
+	        $('#triggerUpload').click(function() {
+		  
+		var uploadedFileNames =  $('.qq-upload-file').text();
+		alert("yes"+uploadedFileNames);
+		globalManualUploader.uploadStoredFiles();
+		});
 		
 		$('#IBAN').hide();
 		if ($("#checkbox").attr('checked'))
@@ -317,15 +369,24 @@ body{padding-top: 60px;}
 		$('#btn-fake').show();
 		}
 		});
-
+		
 
 
 		});
 
+		//in afara document.ready
+	        /*$('#triggerUpload').click(function() {
+		  
+		var uploadedFileNames =  $('.qq-upload-file').text();
+		alert("yes"+uploadedFileNames);
+		globalManualUploader.uploadStoredFiles();
+		});*/
+               
 		</script>
+
 		
 		<script type="text/javascript">
-		$("#wizard").bwizard();
+		//$("#wizard").bwizard();
 
 		function showModal(){
 		  $("#metodologieModal").modal('show');
@@ -339,11 +400,10 @@ body{padding-top: 60px;}
 		manualuploader.uploadStoredFiles();
 		});*/
 
-		var manualuploader = new qq.FineUploader({
+		/*var manualuploader = new qq.FineUploader({
 		element: $('#manual-fine-uploader')[0],
 		request: {
-		endpoint: 'http://localhost:3000/upload/handler'  /* informatii despre partea de server si cum se trimit datele cu POST
-					 https://github.com/Widen/fine-uploader-server/blob/master/readme.md */
+		endpoint: 'http://localhost:3000/upload/handler'  
 		},
 		autoUpload: false,
 		text: {
@@ -361,7 +421,7 @@ body{padding-top: 60px;}
 		var uploadedFileNames =  $('.qq-upload-file').text();
 		alert("yes"+uploadedFileNames);
 		manualuploader.uploadStoredFiles();
-		});
+		});*/
 		
 		$(".modalButton").click(function(){
 		var id = this.id;
@@ -369,12 +429,6 @@ body{padding-top: 60px;}
 		$(modalNou).modal('show');
 		});
 
-	        /*$('#triggerUpload').click(function() {
-		debugger;
-		var uploadedFileNames =  $('.qq-upload-file').text();
-		alert("yes"+uploadedFileNames);
-		manualuploader.uploadStoredFiles();
-		});*/
 		</script>
 		<% end%>
 	</body>

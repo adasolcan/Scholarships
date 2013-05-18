@@ -2,6 +2,10 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
 gem 'rack'
+gem 'jquery-rails'
+gem 'carrierwave'
+gem 'fine-uploader-rails'
+gem 'fileuploader-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -27,9 +31,6 @@ end
 group :production, :testing do
   gem 'pg'
 end
-
-gem 'jquery-rails'
-gem 'carrierwave'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
