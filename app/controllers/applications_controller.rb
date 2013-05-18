@@ -72,6 +72,17 @@ class ApplicationsController < ApplicationController
     end
   end
 
+  def verified
+    @application = Application.find(params[:application_id])
+    @application.status = "Verificat"
+    @application.save
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @application }
+    end
+  end
+
   def admin_manager
     logger.info("ADMIN_MANAGER");
     @class_year = params[:class_year]
