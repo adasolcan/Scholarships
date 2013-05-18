@@ -45,6 +45,12 @@ GEM
       multi_json (~> 1.0)
     faraday (0.8.6)
       multipart-post (~> 1.1)
+    fileuploader-rails (3.5)
+      actionpack (>= 3.1)
+      railties (>= 3.1)
+    fine-uploader-rails (3.2)
+      actionpack (>= 3.1)
+      railties (>= 3.1)
     hashie (1.2.0)
     hike (1.2.1)
     httpauth (0.2.0)
@@ -128,6 +134,8 @@ PLATFORMS
 DEPENDENCIES
   carrierwave
   coffee-rails (~> 3.2.1)
+  fileuploader-rails
+  fine-uploader-rails
   jquery-rails
   omniauth
   omniauth-oauth2
