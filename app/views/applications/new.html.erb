@@ -308,11 +308,12 @@ body{padding-top: 60px;}
 		text: {
 		uploadButton: '<i class="icon-plus icon-white"><\/i> Alege Fisierul'
 		},
-	        template: '<div class="qq-uploader">' +
-	'<div class="qq-upload-button btn btn-info" style="width: auto;">{uploadButtonText}<\/div>' +
-	'<span class="qq-drop-processing-spinner"><\/span><\/span>' +
-	'<ul class="qq-upload-list" style="margin-top: 10px; text-align: center;"><\/ul>' +
-	'<\/div>',
+		template: '<div class="qq-uploader">' +
+'<pre class="qq-upload-drop-area"><span>{dragZoneText}</span></pre>' +
+'<div class="qq-upload-button btn btn-info" style="width: auto;">{uploadButtonText}</div>' +
+'<span class="qq-drop-processing"><span>{dropProcessingText}</span><span class="qq-drop-processing-spinner"></span></span>' +
+'<ul class="qq-upload-list" style="margin-top: 10px; text-align: center;"></ul>' +
+'</div>',
 		});
 
 	        $('#triggerUpload').click(function() {
