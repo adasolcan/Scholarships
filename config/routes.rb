@@ -19,5 +19,7 @@ Team9Scholarships::Application.routes.draw do
   
   match '/applications/:class_year/:specialization/:scholarship_id/manager', :to => 'applications#admin_manager'
 
+  match '/applications/:application_id/verified', :to => 'applications#verified'
+
   match '/upload/handler', :to => 'upload#handler'
 end

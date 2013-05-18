@@ -180,7 +180,7 @@
 		    </div>
 	    <div class="modal-footer">
 	    <button type="button" class="btn btn-danger" data-dismiss="modal">Respinge</button>
-	    <button type="button" class="btn btn-success" data-dismiss="modal" aria-hidden="true">Accepta</button>
+	    <button type="button" class="btn btn-success" data-dismiss="modal" aria-hidden="true">Verificat</button>
 
 	    </div>
     </div>
@@ -222,7 +222,28 @@
 	 });
 	 
 	 $(".btn-success").click(function(){
-	 	alert("AI ACCEPTAT BURSA"+$(".btn-danger").parent().parent().attr('value'));
+	 	alert("AI VERIFICAT BURSA"+$(".btn-danger").parent().parent().attr('value'));
+
+		var url = "/applications/"+ $(".btn-danger").parent().parent().attr('value') +"/verified.json"; 
+
+		alert(url);
+    	$.ajax({
+            type: "GET",
+            url: url,
+            data: {
+            	//an:$('#anStudiu :selected').val(), 
+            	//domeniu:$('#domeniuStudiu :selected').val(), 
+            	//bursa:$('#tipBursa :selected').val()
+            },
+            success: function(content,code) {
+            	//debugger;
+            	//alert(code);
+            	$('body').html(content);
+        	},
+ 			error: function(error){
+                alert(error);
+            }
+          });	
 	 });
 
 	function showModal(){
