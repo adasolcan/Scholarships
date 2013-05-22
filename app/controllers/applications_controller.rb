@@ -82,7 +82,18 @@ class ApplicationsController < ApplicationController
       format.json { render json: @application }
     end
   end
+  
+  def unapproved
+    @application = Application.find(params[:application_id])
+    @application.status = "Neaprobat"
+    @application.save
 
+    respond_to do |format|
+      format.html
+      format.json { render json: @application }
+    end
+  end
+  
   def admin_manager
     logger.info("ADMIN_MANAGER");
     @class_year = params[:class_year]
