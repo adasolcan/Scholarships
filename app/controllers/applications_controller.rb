@@ -3,7 +3,7 @@ require 'json'
 
 class ApplicationsController < ApplicationController
   before_filter :login_required
-
+  skip_before_filter :login_required, :only => [:verified, :unapproved]
   
   
   # GET /applications
@@ -78,7 +78,7 @@ class ApplicationsController < ApplicationController
     @application.save
 
     respond_to do |format|
-      format.html
+      format.html  { redirect_to '/applications/0/0/0/manager' }
       format.json { render json: @application }
     end
   end
@@ -89,7 +89,7 @@ class ApplicationsController < ApplicationController
     @application.save
 
     respond_to do |format|
-      format.html
+      format.html  { redirect_to '/applications/0/0/0/manager' }
       format.json { render json: @application }
     end
   end
