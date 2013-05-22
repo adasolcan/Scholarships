@@ -217,34 +217,49 @@
 	  	$("#showDetails").css("height","250px");
 	 });	
 
+
 	 $(".btn-danger").click(function(){
-	 	alert("AI REFUZAT BURSA "+$(".btn-danger").parent().parent().attr('value'));
-	 });
-	 
-	 $(".btn-success").click(function(){
-	 	alert("AI VERIFICAT BURSA "+$(".btn-danger").parent().parent().attr('value'));
+	 	alert("AI REFUZAT BURSA "+ $(".btn-danger").parent().parent().attr('value'));
+	 	
+	    var BursaId= $(".btn-danger").parent().parent().attr('value'); 
+		var url = "/applications/unapproved/"+ BursaId ; 
 
-		var url = "/applications/"+ $(".btn-danger").parent().parent().attr('value') +"/verified.json"; 
-
-		//alert(url);
     	$.ajax({
-            type: "GET",
-            url: url,
-            data: {
-            	//an:$('#anStudiu :selected').val(), 
-            	//domeniu:$('#domeniuStudiu :selected').val(), 
-            	//bursa:$('#tipBursa :selected').val()
-            },
+    	    url: url,
+            type: "POST",
+            data: { },
             success: function(content,code) {
-            	//debugger;
-            	//alert(code);
             	$('body').html(content);
         	},
  			error: function(error){
-                alert(error);
+ 			 console.log("data returned = " + error);
+             alert("eroare"+error);
             }
           });	
 	 });
+	  
+	 
+	 $(".btn-success").click(function(){
+	 	alert("AI VERIFICAT BURSA "+$(".btn-danger").parent().parent().attr('value'));
+	 	
+        var BursaId= $(".btn-danger").parent().parent().attr('value'); 
+		var url = "/applications/verified/"+ BursaId ; 
+
+    	$.ajax({
+    	    url: url,
+            type: "POST",
+            data: { },
+            success: function(content,code) {
+            	$('body').html(content);
+        	},
+ 			error: function(error){
+ 			 console.log("data returned = " + error);
+             alert("eroare"+error);
+            }
+          });	
+	 });
+	 
+	 
 
 	function showModal(){
 	   $("#metodologieModal").modal('show') ;
