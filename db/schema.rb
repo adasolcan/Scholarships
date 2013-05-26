@@ -42,9 +42,9 @@ ActiveRecord::Schema.define(:version => 20130416060714) do
 
   create_table "scholarships", :force => true do |t|
     t.string   "stype"
-    t.string   "value"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "value",      :limit => 255
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
 
   create_table "user_resources", :force => true do |t|
