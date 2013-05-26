@@ -6,7 +6,7 @@
 .depune
 {
 	border:none;
-	left: 5px;
+	background: transparent;
+	top: -2px;
 	position: relative;
-	top:-1px;
 }
