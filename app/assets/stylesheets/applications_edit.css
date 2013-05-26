@@ -3,3 +3,10 @@
 	min-height: 170px;
   min-width: 200px;
 }
+.depune
+{
+	border:none;
+	left: 5px;
+	position: relative;
+	top:-1px;
+}

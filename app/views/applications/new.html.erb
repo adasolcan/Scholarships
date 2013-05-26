@@ -11,6 +11,7 @@ body{padding-top: 60px;}
 		<link href="/assets/jasny-bootstrap.css" rel="stylesheet" type="text/css">
 		<!--link href="/assets/lightbox.css" rel="stylesheet" type="text/css"-->
 		<link href="/assets/fu.css" rel="stylesheet" type="text/css">
+		<link href="/assets/applications_edit.css" rel="stylesheet" type="text/css">
 		<script src="/assets/jquery.min.js" type="text/javascript">
 </script>
 		<script src="/assets/bootstrap.js" type="text/javascript">
@@ -239,8 +240,8 @@ body{padding-top: 60px;}
                     </h4>
                         <%# logger.info("USER ID = " + @current_user.id.to_s + " app.USER_ID= ")%>
                         <ul class="pager" style="z-index:2">
-                        		<a style="position:absolute; left:626px; bottom:1px">
-                        		<%= f.submit "Depune cererea", :class => 'btn bwizard-buttons next' %>
+                        		<a style="position:absolute; left:626px; bottom:1px;">
+                        		<%= f.submit "Depune cererea", :class => 'depune btn bwizard-buttons next' %>
                         		</a>
                     	</ul>			
 				</div>
