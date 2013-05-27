@@ -164,10 +164,11 @@ class ApplicationsController < ApplicationController
     @contor = 0;
 	
     respond_to do |format|
-      format.html
+      format.html 
       format.json { render json: @applications }
     end    
   end
+
   
   
   def admin
