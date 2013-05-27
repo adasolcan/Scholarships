@@ -221,7 +221,7 @@
 
 
 	 $(".btn-danger").click(function(){
-	 	alert("AI REFUZAT BURSA "+ $(".btn-danger").parent().parent().attr('value'));
+	 	//alert("AI REFUZAT BURSA "+ $(".btn-danger").parent().parent().attr('value'));
 	 	
 	    var BursaId= $(".btn-danger").parent().parent().attr('value'); 
 		var url = "/applications/unapproved/"+ BursaId ; 
@@ -235,14 +235,14 @@
         	},
  			error: function(error){
  			 console.log("data returned = " + error);
-             alert("eroare"+error);
+            // alert("eroare"+error);
             }
           });	
 	 });
 	  
 	 
 	 $(".btn-success").click(function(){
-	 	alert("AI VERIFICAT BURSA "+$(".btn-danger").parent().parent().attr('value'));
+	 	//alert("AI VERIFICAT BURSA "+$(".btn-danger").parent().parent().attr('value'));
 	 	
         var BursaId= $(".btn-danger").parent().parent().attr('value'); 
 		var url = "/applications/verified/"+ BursaId ; 
@@ -256,7 +256,7 @@
         	},
  			error: function(error){
  			 console.log("data returned = " + error);
-             alert("eroare"+error);
+             //alert("eroare"+error);
             }
           });	
 	 });

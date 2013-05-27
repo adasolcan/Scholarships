@@ -139,10 +139,10 @@ class ApplicationsController < ApplicationController
     @scholarship_id = params[:scholarship_id]
     logger.info("@class_year = "+@class_year+" @specialization = "+@specialization+" @scholarship_id = "+@scholarship_id)
     if (@class_year == "0" && @specialization == "0" && @scholarship_id == "0")
-      @applications = Application.where("status = ?","Verificat")
+      @applications = Application.where("status != ?","In asteptare")
       @scholarship = Scholarship.first
     elsif (@class_year == "0" && @specialization == "0")
-      @applications = Application.where("scholarship_id = ? AND status = ?",@scholarship_id,"Verificat")
+      @applications = Application.where("scholarship_id = ? AND status != ?",@scholarship_id,"In asteptare")
       @scholarship = Scholarship.find(params[:scholarship_id])      
     elsif (@specialization == "0" && @scholarship_id == "0")
       logger.info("ADMIN_MANAGER -> class_year")
