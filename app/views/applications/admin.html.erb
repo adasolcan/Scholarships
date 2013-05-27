@@ -197,7 +197,7 @@
 			  <td>Popescu</td>
 			  <td>I</td>	 
 			  <td>Merit</td>
-			  <td><button class="btn btn-info modalButton" id="1">Vezi Bursa</button></td>
+			   <td> <%= content_tag(:button, "Vezi Cerere", :class => "btn btn-info modalButton", :id=> 17)  -%> </td>
 			  <td>In asteptare</td>
 			</tr>
 			<tr>
@@ -206,7 +206,7 @@
 			  <td>Georgescu</td>
 			  <td>II</td>
 			  <td>Sociala</td>
-			   <td><button class="btn btn-info modalButton" id="2">Vezi Bursa</button></td>
+			  <td> <%= content_tag(:button, "Vezi Cerere", :class => "btn btn-info modalButton", :id=> 17)  -%> </td>
 			  <td>In asteptare</td>
 			</tr>
 			<tr>
@@ -215,7 +215,7 @@
 			  <td>Popescu</td>
 			  <td>I</td>
 			  <td>Sociala</td>
-			   <td><button class="btn btn-info modalButton" id="3">Vezi Bursa</button></td>
+			   <td> <%= content_tag(:button, "Vezi Cerere", :class => "btn btn-info modalButton", :id=> 17)  -%> </td>
 			  <td>In asteptare</td>
 			</tr>
 			<tr>
@@ -224,7 +224,7 @@
 			  <td>Ionescu</td>
 			  <td>III</td>	 
 			  <td>Orfan</td>
-			   <td><button class="btn btn-info modalButton" id="4">Vezi Bursa</button></td>
+			  <td> <%= content_tag(:button, "Vezi Cerere", :class => "btn btn-info modalButton", :id=> 17)  -%> </td>
 			  <td>In asteptare</td>
 			</tr>
 		</table>
@@ -280,7 +280,7 @@
 			  <td>Rezolvatul</td>
 			  <td>I</td>	 
 			  <td>Merit</td>
-			  <td><button class="btn btn-info modalButton" id="1">Vezi Bursa</button></td>
+			  <td> <%= content_tag(:button, "Vezi Cerere", :class => "btn btn-info modalButton", :id=> 17)  -%> </td>
 			  <td>In asteptare</td>
 			</tr>
 			<tr>
@@ -289,7 +289,7 @@
 			  <td>Rezolvatul</td>
 			  <td>II</td>
 			  <td>Sociala</td>
-			   <td><button class="btn btn-info modalButton" id="2">Vezi Bursa</button></td>
+			   <td> <%= content_tag(:button, "Vezi Cerere", :class => "btn btn-info modalButton", :id=> 17)  -%> </td>
 			  <td>In asteptare</td>
 			</tr>
 			<tr>
@@ -298,7 +298,7 @@
 			  <td>Popescu</td>
 			  <td>I</td>
 			  <td>Sociala</td>
-			   <td><button class="btn btn-info modalButton" id="3">Vezi Bursa</button></td>
+			  <td> <%= content_tag(:button, "Vezi Cerere", :class => "btn btn-info modalButton", :id=> 17 )  -%> </td>
 			  <td>In asteptare</td>
 			</tr>
 			<tr>
@@ -307,11 +307,12 @@
 			  <td>Ionescu</td>
 			  <td>III</td>	 
 			  <td>Orfan</td>
-			   <td><button class="btn btn-info modalButton" id="4">Vezi Bursa</button></td>
+			  <td> <%= content_tag(:button, "Vezi Cerere", :class => "btn btn-info modalButton", :id=> 17)  -%> </td>
 			  <td>In asteptare</td>
 			</tr>
 		</table>
 	</div>
+	
 	<div class="modal hide fade" id="metodologieModal">
 	    <div class="modal-header">
 	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -326,6 +327,42 @@
 	    </div>
     </div>
 	</div>
+	
+	
+	  <!-- MODAL PENTRU VIZUALIZARE CERERE -->
+    <div class="modal hide fade" id="modalCerere">
+	    <div class="modal-header">
+	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	    <h3>Vizualizare cerere</h3>
+	    </div>
+		    <div class="modal-body">
+		
+		    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		    </div>
+	    <div class="modal-footer">
+	    <button type="button" class="btn btn-info" >Vezi acte</button>
+	    <button type="button" class="btn btn-info" >Notifica</button>
+	    <button type="button" class="btn btn-danger" data-dismiss="modal">Respinge</button>
+	    <button type="button" class="btn btn-success" data-dismiss="modal" aria-hidden="true">Aproba</button>
+
+	    </div>
+    </div>
+    <!--
+    <div class="modal hide fade" id="modal2">
+	    <div class="modal-header">
+	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	    <h3>Bursa sociala</h3>
+	    </div>
+		    <div class="modal-body">
+		    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		    </div>
+	    <div class="modal-footer">
+	    <button type="button" class="btn btn-danger" data-dismiss="modal">Respinge</button>
+	    <button type="button" class="btn btn-success" data-dismiss="modal" aria-hidden="true">Accepta</button>	    </div>
+    </div>
+    -->
+	
+	
 	<div class="bottom-logo">
 		<img src="/assets/logo.png" width="150px" height="150px"/>
 		</div>
@@ -338,12 +375,58 @@
 	function showModal(){
 	   $("#metodologieModal").modal('show') ;
 	 }
+
 	
 	 $(".modalButton").click(function(){
-		var id = this.id;
-		var modalNou = '#modal' + id;
-		$(modalNou).modal('show');
+	  var applicationId=this.id;
+	  	$("#modalCerere").modal('show');
+	  	$("p").load("/applications/"+applicationId+" #showDetails").parent().parent().attr("value",applicationId);
+	  	$("#showDetails").css("height","250px");
+	 });	
+
+
+	 $(".btn-danger").click(function(){
+	 	//alert("AI REFUZAT BURSA "+ $(".btn-danger").parent().parent().attr('value'));
+	 	
+	    var BursaId= $(".btn-danger").parent().parent().attr('value'); 
+		var url = "/applications/unapproved/"+ BursaId ; 
+
+    	$.ajax({
+    	    url: url,
+            type: "POST",
+            data: { },
+            success: function(content,code) {
+            	$('body').html(content);
+        	},
+ 			error: function(error){
+ 			 console.log("data returned = " + error);
+            // alert("eroare"+error);
+            }
+          });	
 	 });
+	  
+	 
+	 $(".btn-success").click(function(){
+	 	//alert("AI VERIFICAT BURSA "+$(".btn-danger").parent().parent().attr('value'));
+	 	
+        var BursaId= $(".btn-danger").parent().parent().attr('value'); 
+		var url = "/applications/approved/"+ BursaId ; 
+
+    	$.ajax({
+    	    url: url,
+            type: "POST",
+            data: { },
+            success: function(content,code) {
+            	$('body').html(content);
+        	},
+ 			error: function(error){
+ 			 console.log("data returned = " + error);
+             //alert("eroare"+error);
+            }
+          });	
+	 });
+	 
+	 
 	  $("#actualizareLocuriBurse").click(function(){
 		 var locuriAn1InfoInfo=$("#1InfoInfo").val();
 		 var locuriAn1MateMate=$("#1MateMate").val();

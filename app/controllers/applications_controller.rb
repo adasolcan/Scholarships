@@ -94,6 +94,17 @@ class ApplicationsController < ApplicationController
     end
   end
   
+    def approved
+    @application = Application.find(params[:application_id])
+    @application.status = "Aprobat"
+    @application.save
+
+    #respond_to do |format|
+     # format.html  { redirect_to '/applications/0/0/0/manager' }
+      #format.json { render json: @application }
+    #end
+  end
+  
   def admin_manager
     logger.info("ADMIN_MANAGER");
     @class_year = params[:class_year]

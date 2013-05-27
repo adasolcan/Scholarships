@@ -23,6 +23,7 @@ Team9Scholarships::Application.routes.draw do
 
   match '/applications/verified/:application_id', :to => 'applications#verified'
   match '/applications/unapproved/:application_id', :to => 'applications#unapproved'
+   match '/applications/approved/:application_id', :to => 'applications#approved'
 
   match '/upload/handler', :to => 'upload#handler'
 end
