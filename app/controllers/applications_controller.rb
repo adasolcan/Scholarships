@@ -131,6 +131,45 @@ class ApplicationsController < ApplicationController
     end    
   end
   
+  
+    def admin_manager_verified
+    logger.info("ADMIN_MANAGER");
+    @class_year = params[:class_year]
+    @specialization = params[:specialization]
+    @scholarship_id = params[:scholarship_id]
+    logger.info("@class_year = "+@class_year+" @specialization = "+@specialization+" @scholarship_id = "+@scholarship_id)
+    if (@class_year == "0" && @specialization == "0" && @scholarship_id == "0")
+      @applications = Application.where("status = ?","Verificat")
+      @scholarship = Scholarship.first
+    elsif (@class_year == "0" && @specialization == "0")
+      @applications = Application.where("scholarship_id = ? AND status = ?",@scholarship_id,"Verificat")
+      @scholarship = Scholarship.find(params[:scholarship_id])      
+    elsif (@specialization == "0" && @scholarship_id == "0")
+      logger.info("ADMIN_MANAGER -> class_year")
+      @application = Application.first
+      @applications = @application.show_by_class_year({:class_year => @class_year, :token => @current_user.token})
+      @scholarship = Scholarship.first
+    end
+    #@application = Application.find_by_scholarship_id(params[:scholarship_id])
+    #@applications = @application.show_manager({:class_year => params[:class_year], :specialization => params[:specialization], :scholarship_id => params[:scholarship_id]})
+
+	  logger.info("@applications.size = " + @applications.size.to_s);
+
+
+    @user = User.last()
+
+    #logger.info("@APPLICATIONS " + @applications[1]["status"])
+    puts @applications
+    
+    @contor = 0;
+	
+    respond_to do |format|
+      format.html
+      format.json { render json: @applications }
+    end    
+  end
+  
+  
   def admin
   end
 

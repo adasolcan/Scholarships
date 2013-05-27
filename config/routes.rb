@@ -18,6 +18,8 @@ Team9Scholarships::Application.routes.draw do
   match '/applications/:scholarship_id/new', :to => 'applications#new'
   
   match '/applications/:class_year/:specialization/:scholarship_id/manager', :to => 'applications#admin_manager'
+  match '/applications/:class_year/:specialization/:scholarship_id/manager_verified', :to => 'applications#admin_manager_verified'
+
 
   match '/applications/verified/:application_id', :to => 'applications#verified'
   match '/applications/unapproved/:application_id', :to => 'applications#unapproved'
