@@ -21,7 +21,8 @@ class UploadController < ApplicationController
   #logger.info("session=" + session.to_s)
   res = Net::HTTP.post_form(uri, params)
 
-  logger.info(res.to_json)
+  logger.info(res.body.to_json)
+
   render :text => '{"success": true}'
   end
 
