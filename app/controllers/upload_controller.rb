@@ -21,13 +21,13 @@ class UploadController < ApplicationController
   #logger.info("session=" + session.to_s)
   res = Net::HTTP.post_form(uri, params)
 
-  logger.info(res.body['status'])
+  #logger.info(res.body.status)
 
-  if res.body['status'] == 'Succes'
+  #if res.body.status == 'Succes'
     render :text => '{"success": true}'
-  else 
-    render :text => '{"success": false}'
-  end
+  #else 
+   # render :text => '{"success": false}'
+ # end
 
   end
 
