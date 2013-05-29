@@ -23,7 +23,12 @@ class UploadController < ApplicationController
 
   logger.info(res.body.to_json)
 
-  render :text => '{"success": true}'
+  if res.body['status'] == 'Succes'
+    render :text => '{"success": true}'
+  else 
+    render :text => '{"success": false}'
+  end
+
   end
 
 end
