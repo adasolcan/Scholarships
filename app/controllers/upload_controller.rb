@@ -19,7 +19,7 @@ class UploadController < ApplicationController
   params[:title] = params['qqfile'].original_filename
   params[:extension] = params['qqfile'].content_type
   #logger.info("fisier temporar = " + @temp_file.to_s);
-  logger.info("content type=" + params['qqfile'].content_type)
+  logger.info("content type=" + params['qqfile'].tempfile.extname)
   res = Net::HTTP.post_form(uri, params)
 
   logger.info('raspuns upload=' + res.body.to_json)
