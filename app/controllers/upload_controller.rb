@@ -17,6 +17,7 @@ class UploadController < ApplicationController
   params[:id_module] = 9
   params[:id_user] = 34
   params[:title] = params['qqfile'].original_filename
+  params[:extension] = params['qqfile'].content_type
   #logger.info("fisier temporar = " + @temp_file.to_s);
   #logger.info("session=" + session.to_s)
   res = Net::HTTP.post_form(uri, params)
